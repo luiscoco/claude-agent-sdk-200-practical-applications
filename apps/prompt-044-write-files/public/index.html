@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 44 · Write Report Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 44</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Write<br /><em>Reports</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">Create with native Write, inspect with Read and verify the saved bytes.</p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Create a report and verify its saved contents</h2>
+          <p class="intro">
+            Inspect the actual tool calls, new report file, exact contents and SHA-256 comparison.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">{ }</span>
+              <h3>Native Write and Read-back experiment</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Classroom policy<select id="mode">
+                  <option value="create">Allow the requested report file</option>
+                  <option value="blocked">Deliberately deny native Write</option>
+                </select></label
+              >
+              <button id="inspect" class="primary" disabled>▶ Create and verify report</button
+              ><button id="repair" class="secondary">Restore report writing</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the classroom facts.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>File before execution</span><strong id="before">—</strong></article>
+            <article><span>File after execution</span><strong id="after">—</strong></article>
+            <article>
+              <span>Exact saved contents</span><strong id="content-check">—</strong>
+            </article>
+            <article><span>SHA-256 comparison</span><strong id="hash-check">—</strong></article>
+          </section>
+          <div class="contents-panels">
+            <section class="panel expected-panel">
+              <div class="heading">
+                <span class="icon blue">≡</span>
+                <h3>Requested Markdown content</h3>
+              </div>
+              <pre id="expected"></pre>
+            </section>
+            <section class="panel actual-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Actual file read-back</h3>
+              </div>
+              <pre id="actual">Awaiting native Write and verification.</pre>
+            </section>
+          </div>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon orange">⇢</span>
+              <h3>Actual Write, Read and file evidence</h3>
+            </div>
+            <pre id="hashes"></pre>
+            <pre id="evidence"></pre>
+            <details>
+              <summary>Native tool results and policy decisions</summary>
+              <pre id="tool-results"></pre>
+            </details>
+            <a id="file-download" class="secondary hidden" download
+              >Download the actual report.md</a
+            >
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed file-writing report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual file writing and verification</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 44 · Write and verify files</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Write and verify files infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 44 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

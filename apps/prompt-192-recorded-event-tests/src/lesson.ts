@@ -1,0 +1,8 @@
+import { native, requireNative, report } from './native.js';
+import { reduceEvents } from './contracts.js';
+export async function run(mode: string) {
+  const observed = await native(mode === 'live' ? 'Reply briefly about event replay.' : 'Record this native zero-inference transcript for replay.', {}, mode === 'live'); requireNative(observed, mode !== 'live');
+  const representative = [ { type: 'stream_event', event: { type: 'content_block_delta', delta: { type: 'text_delta', text: 'Hello ' } } }, { type: 'stream_event', event: { type: 'content_block_delta', delta: { type: 'text_delta', text: 'world' } } }, { type: 'assistant', message: { content: [{ type: 'tool_use', name: 'inspect' }] } }, { type: 'approval' }, { type: 'future_event' }, { type: 'result', subtype: 'success', is_error: false } ];
+  const fixture = reduceEvents(representative), actual = reduceEvents(observed.events), failed = reduceEvents([{ type: 'result', subtype: 'error_max_turns', is_error: true }]);
+  return report({ actualReplay: actual, representativeFixtureReplay: fixture, fixtureProvenance: 'Explicit synthetic representative events; not claimed as a model run.' }, { actualResultReplays: actual.completed, partialTextReassembles: fixture.text === 'Hello world', toolAndApprovalRendered: fixture.tools[0] === 'inspect' && fixture.approvals === 1, unknownEventsTolerated: fixture.unknown === 1, errorNotPresentedAsSuccess: failed.failed && !failed.completed }, { observed, representative }, 'Actual recorded transcript and separately labelled representative fixtures. Replaying either makes no model call; live mode first records a real model run.');
+}

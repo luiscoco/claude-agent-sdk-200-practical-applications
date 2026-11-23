@@ -1,0 +1,5 @@
+[
+  {"sku":"NOTEBOOK","stock":3,"reorderPoint":5,"target":100},
+  {"sku":"PENCIL","stock":50,"reorderPoint":55,"target":60},
+  {"sku":"PEN","stock":100,"reorderPoint":20,"target":80}
+]

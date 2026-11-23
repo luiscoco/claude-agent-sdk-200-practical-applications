@@ -1,0 +1,12 @@
+{
+  "number": 155,
+  "title": "Spending limits",
+  "application": "course-labs/prompt-155-spending-limits",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:48.150Z"
+}

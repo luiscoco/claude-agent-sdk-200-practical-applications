@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 28 · Queued Messages Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 28</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Queued<br /><em>Messages</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Follow three user-message UUIDs from FIFO input to native result coverage.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Queue messages and verify their processing order</h2>
+          <p class="intro">
+            Compare rapid submission with result-paced submission in a real SDK query.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⇢</span>
+              <h3>Three arithmetic queue items</h3>
+              <span id="status" class="badge">Ready</span>
+            </div>
+            <div class="controls">
+              <label
+                >Submission mode<select id="mode">
+                  <option value="rapid">Rapid · queue A, B and C together</option>
+                  <option value="paced">Paced · enqueue after each result</option>
+                  <option value="duplicate">Deliberate duplicate UUID · application guard</option>
+                </select></label
+              >
+              <button id="inspect" class="primary">▶ Run queue</button
+              ><button id="repair" class="secondary">Restore unique UUIDs</button>
+            </div>
+            <p id="progress">Each run creates fresh UUIDs and one SDK query.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Submitted messages</span><strong id="submitted">—</strong></article>
+            <article><span>Yielded to SDK</span><strong id="yielded">—</strong></article>
+            <article><span>Native result groups</span><strong id="groups">—</strong></article>
+            <article><span>Ordered coverage</span><strong id="coverage">—</strong></article>
+          </section>
+          <div class="columns">
+            <section class="panel items-panel">
+              <div class="heading">
+                <span class="icon blue">≡</span>
+                <h3>FIFO input and message IDs</h3>
+              </div>
+              <div id="items"><p class="empty">Awaiting actual input observations.</p></div>
+            </section>
+            <section class="panel results-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Actual SDK result groups</h3>
+              </div>
+              <div id="results"><p class="empty">Awaiting actual SDK results.</p></div>
+            </section>
+          </div>
+          <section class="panel verification-panel">
+            <div class="heading">
+              <span class="icon orange">⌘</span>
+              <h3>Independent verification</h3>
+            </div>
+            <pre id="verification">Awaiting queue completion.</pre>
+            <a id="download" class="secondary hidden" download>Download observed queue report</a>
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual queue implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 28 · Queued messages</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original queued-message infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 28 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

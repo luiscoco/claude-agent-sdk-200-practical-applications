@@ -1,0 +1,2 @@
+Unrelated classroom fixture.
+This sibling directory is outside the requested additional directory.

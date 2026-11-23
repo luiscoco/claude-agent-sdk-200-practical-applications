@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 43 · Find and Search Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 43</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Find<br /><em>Search</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">Find files with Glob, then verify Grep matches against the source.</p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Find files and search their actual source contents</h2>
+          <p class="intro">
+            Inspect the actual discovery and content-search calls, paths, line numbers and errors.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">{ }</span>
+              <h3>Native Glob and Grep search</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Search scenario<select id="mode">
+                  <option value="matches">Find discount validation and policy symbols</option>
+                  <option value="no-results">Search for an absent symbol</option>
+                  <option value="invalid-regex">Deliberate malformed regex · [</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Find and search</button
+              ><button id="repair" class="secondary">Restore valid regex</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the classroom facts.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Verified discovered files</span><strong id="file-count">—</strong>
+            </article>
+            <article>
+              <span>Actual matching source lines</span><strong id="match-count">—</strong>
+            </article>
+            <article><span>Exact native regex</span><strong id="pattern-check">—</strong></article>
+            <article>
+              <span>Independent source check</span><strong id="source-check">—</strong>
+            </article>
+          </section>
+          <div class="result-columns">
+            <section class="panel files-panel">
+              <div class="heading">
+                <span class="icon blue">▤</span>
+                <h3>Discovered TypeScript files</h3>
+              </div>
+              <div id="project-files"></div>
+              <pre id="answer">Awaiting actual Glob and Grep results.</pre>
+            </section>
+            <section class="panel matches-panel">
+              <div class="heading">
+                <span class="icon orange">⌕</span>
+                <h3>Returned source matches</h3>
+              </div>
+              <div id="matches">Awaiting the actual content search.</div>
+            </section>
+          </div>
+          <section class="panel source-panel">
+            <div class="heading">
+              <span class="icon mint">⌘</span>
+              <h3 id="file-title">Classroom project source</h3>
+            </div>
+            <pre id="target-source"></pre>
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⇢</span>
+              <h3>Actual native search evidence</h3>
+            </div>
+            <pre id="evidence">Awaiting native tool calls.</pre>
+            <details>
+              <summary>Actual Glob and Grep tool results</summary>
+              <pre id="tool-results"></pre>
+            </details>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed file-search report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual file discovery and content search</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 43 · Find files and search contents</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Find files and search contents infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 43 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

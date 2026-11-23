@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 33 · Tool-call Streaming Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 33</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Tool-call<br /><em>Streaming</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Buffer argument fragments for progress. Parse the preview after its complete block
+          arrives.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Observe tool arguments while their JSON is arriving</h2>
+          <p class="intro">
+            A real SDK Write creates a fresh classroom notes file. Its argument preview stays
+            display data.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⌘</span>
+              <h3>Streamed Write task</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Preview mode<select id="mode">
+                  <option value="normal">Buffer fragments and parse after block completion</option>
+                  <option value="truncated-preview">
+                    Deliberate application error · truncate final preview
+                  </option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Run real Write task</button
+              ><button id="repair" class="secondary">Restore complete preview</button>
+            </div>
+            <p id="progress">Loading the classroom file task.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>input_json_delta events</span><strong id="fragments">—</strong></article>
+            <article><span>Preview state</span><strong id="phase">—</strong></article>
+            <article>
+              <span>Native Write requests</span><strong id="native-calls">—</strong>
+            </article>
+            <article>
+              <span>Actual file matches task</span><strong id="file-check">—</strong>
+            </article>
+          </section>
+          <div class="columns">
+            <section class="panel raw-panel">
+              <div class="heading">
+                <span class="icon blue">{ }</span>
+                <h3>Actual argument buffer</h3>
+              </div>
+              <p id="identity"></p>
+              <pre id="raw">Awaiting actual argument fragments.</pre>
+            </section>
+            <section class="panel parsed-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Preview parsed after block completion</h3>
+              </div>
+              <pre id="parsed">Awaiting the complete tool block.</pre>
+            </section>
+          </div>
+          <section class="panel verification-panel">
+            <div class="heading">
+              <span class="icon orange">≡</span>
+              <h3>Actual SDK Write and file verification</h3>
+            </div>
+            <pre id="verification">Awaiting native execution and the actual notes file.</pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed tool-stream report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual argument-preview implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 33 · Tool-call streaming</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original tool-call streaming infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 33 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

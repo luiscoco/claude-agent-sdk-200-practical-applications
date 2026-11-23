@@ -1,0 +1,12 @@
+{
+  "number": 134,
+  "title": "Early startup",
+  "application": "course-labs/prompt-134-early-startup",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:22.382Z"
+}

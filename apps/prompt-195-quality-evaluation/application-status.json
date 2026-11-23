@@ -1,0 +1,12 @@
+{
+  "number": 195,
+  "title": "Quality evaluation",
+  "application": "course-labs/prompt-195-quality-evaluation",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-23T10:58:23.402Z"
+}

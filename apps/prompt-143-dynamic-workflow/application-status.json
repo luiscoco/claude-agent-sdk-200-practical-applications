@@ -1,0 +1,12 @@
+{
+  "number": 143,
+  "title": "Dynamic workflow",
+  "application": "course-labs/prompt-143-dynamic-workflow",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:22.959Z"
+}

@@ -1,0 +1,4 @@
+{
+  "cleanupPeriodDays":7,
+  "env":{"LESSON_SETTING_ORIGIN":"user"}
+}

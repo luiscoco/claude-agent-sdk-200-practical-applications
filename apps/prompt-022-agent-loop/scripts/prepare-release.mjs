@@ -1,0 +1,21 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+const root=path.resolve(import.meta.dirname,'..'),workspace=path.resolve(root,'../..'),out=path.join(workspace,'output/prompt-022-pilot');
+const student=path.join(out,'student-project');await fs.mkdir(student,{recursive:true});
+for(const name of ['src','public','fixtures','tests','tsconfig.json','playwright.config.ts','.env.example','.gitignore','README.md','package-lock.json'])await fs.cp(path.join(root,name),path.join(student,name),{recursive:true});
+const pkg=JSON.parse(await fs.readFile(path.join(root,'package.json'),'utf8'));delete pkg.scripts.record;
+await fs.writeFile(path.join(student,'package.json'),JSON.stringify(pkg,null,2));
+await fs.copyFile(path.join(root,'INSTRUCTOR-REVIEW.md'),path.join(out,'INSTRUCTOR-REVIEW.md'));
+await fs.copyFile(path.join(workspace,'course-labs/asset-catalog.json'),path.join(out,'asset-catalog-200.json'));
+await fs.mkdir(path.join(out,'evidence'),{recursive:true});
+for(const name of ['prompt-022-agent-loop-pilot.mp4','narration.srt','narration.txt','inworld-settings.json','timeline.json','video-validation.json','media-checks.json','video-contact-sheet.png'])await fs.copyFile(path.join(root,'recordings',name),path.join(out,name));
+for(const name of ['live-run-evidence.json','recorded-download-report.json','live-claude-verified.png','invalid-input.png','verification-summary.json'])await fs.copyFile(path.join(root,'recordings',name),path.join(out,'evidence',name));
+const files=[];
+async function scan(dir){for(const entry of await fs.readdir(dir,{withFileTypes:true})){const file=path.join(dir,entry.name);if(entry.isDirectory())await scan(file);else{const bytes=await fs.readFile(file);if(!/\.png$/.test(entry.name)&&/sk-ant-[a-z0-9_-]{15,}/i.test(bytes.toString('utf8')))throw Error('Credential-like value found in release file');files.push({file:path.relative(out,file),bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}}}
+await scan(student);
+const evidence=JSON.parse(await fs.readFile(path.join(out,'evidence/live-run-evidence.json'),'utf8'));
+if(evidence.status!=='completed'||evidence.report?.actual?.total!==50||!evidence.events.some(e=>e.type==='tool_completed'))throw Error('Missing successful live evidence');
+await fs.writeFile(path.join(out,'release-manifest.json'),JSON.stringify({generatedAt:new Date().toISOString(),pilot:22,liveRun:evidence.id,model:evidence.report.agent.model,readCalls:evidence.report.agent.readCalls,statistics:evidence.report.actual,studentFiles:files,instructorReview:'pending',otherApps:'planned'},null,2));
+await fs.writeFile(path.join(out,'START-HERE.txt'),'Prompt 22 — Agent Loop Lab\n\nWatch prompt-022-agent-loop-pilot.mp4. Import narration.srt as English captions if needed.\nUnzip prompt-022-student-project.zip and follow README.md. Credentials are not included.\nThe pilot contains a real Claude SDK run, independent verification, actual source, failure/repair and an exercise.\nRead INSTRUCTOR-REVIEW.md before publication. This pilot has not been submitted to Udemy.\nasset-catalog-200.json identifies all selected original infographic images; remaining apps/videos are planned.\n');
+console.log('Prepared '+out);

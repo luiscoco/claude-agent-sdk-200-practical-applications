@@ -1,0 +1,18 @@
+{
+  "agent-loop": {
+    "title": "Agent execution loop",
+    "minutes": 6,
+    "topics": [
+      "Tool selection",
+      "Observed results"
+    ]
+  },
+  "local-mcp": {
+    "title": "Local MCP over stdio",
+    "minutes": 7,
+    "topics": [
+      "Child process",
+      "JSON-RPC messages"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {spawn} from 'node:child_process';
+const root=path.resolve(import.meta.dirname,'..'),out=path.join(root,'recordings');
+const require=createRequire(path.resolve(root,'../../output/prompt-01-video/tools/package.json'));
+const ffmpeg=require('ffmpeg-static'),probe=require('ffprobe-static').path;
+async function run(exe,args){return new Promise((resolve,reject)=>{const p=spawn(exe,args,{windowsHide:true});let stdout='',stderr='';p.stdout.on('data',d=>stdout+=d);p.stderr.on('data',d=>stderr=(stderr+d).slice(-12000));p.on('error',reject);p.on('close',code=>code===0?resolve({stdout,stderr}):reject(Error(stderr)));});}
+const file=path.join(out,'prompt-022-agent-loop-pilot.mp4');
+const metadata=JSON.parse((await run(probe,['-v','error','-show_format','-show_streams','-of','json',file])).stdout);
+const video=metadata.streams.find(s=>s.codec_type==='video'),audio=metadata.streams.find(s=>s.codec_type==='audio'),subtitles=metadata.streams.find(s=>s.codec_type==='subtitle');
+if(video.width!==1920||video.height!==1080||video.codec_name!=='h264'||audio.channels!==2||audio.sample_rate!=='48000'||!subtitles)throw Error('Media export does not match the production target');
+await run(ffmpeg,['-v','error','-i',file,'-map','0:v:0','-map','0:a:0','-f','null','-']);
+const levels=await run(ffmpeg,['-hide_banner','-i',file,'-vn','-sn','-af','volumedetect','-f','null','-']);
+const timeline=JSON.parse(await fs.readFile(path.join(out,'timeline.json'),'utf8'));
+const select=timeline.chapters.map(c=>`eq(n,${Math.round((c.start+Math.min(3,c.duration/2))*30)})`).join('+');
+await run(ffmpeg,['-y','-v','error','-i',file,'-vf',`select='${select}',scale=480:270,tile=4x4:nb_frames=15:padding=2:color=0x10172d`,'-frames:v','1',path.join(out,'video-contact-sheet.png')]);
+const srt=await fs.readFile(path.join(out,'narration.srt'),'utf8');
+const captionCount=(srt.match(/ --> /g)||[]).length;if(captionCount<100)throw Error('Caption export unexpectedly short');
+const result={checkedAt:new Date().toISOString(),decodePassed:true,width:video.width,height:video.height,fps:video.avg_frame_rate,videoCodec:video.codec_name,audioCodec:audio.codec_name,channels:audio.channels,sampleRate:audio.sample_rate,duration:Number(metadata.format.duration),bytes:Number(metadata.format.size),chapters:timeline.chapters.length,captionCount,meanVolumeDb:levels.stderr.match(/mean_volume: ([\d.-]+)/)?.[1],maxVolumeDb:levels.stderr.match(/max_volume: ([\d.-]+)/)?.[1],contactSheet:'video-contact-sheet.png',instructorReview:'pending'};
+await fs.writeFile(path.join(out,'media-checks.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));

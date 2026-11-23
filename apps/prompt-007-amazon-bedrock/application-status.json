@@ -1,0 +1,12 @@
+{
+  "number": 7,
+  "title": "Amazon Bedrock",
+  "application": "course-labs/prompt-007-amazon-bedrock",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_provider_configuration_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-23T10:57:32.785Z"
+}

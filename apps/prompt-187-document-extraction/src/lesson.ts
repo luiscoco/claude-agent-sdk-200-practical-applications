@@ -1,0 +1,17 @@
+import { writeFile, readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { chromium } from 'playwright';
+import { native, requireNative, report } from './native.js';
+export async function run(mode: string) {
+  const directory = process.env.LAB_WORKSPACE!, text = path.join(directory, 'receipt.txt'), image = path.join(directory, 'receipt.png');
+  await writeFile(text, 'Receipt R-187\nVendor: Classroom Books\nTotal: EUR 42.50\nDate: not supplied\n');
+  const browser = await chromium.launch({ channel: 'chrome', headless: true });
+  try { const page = await browser.newPage({ viewport: { width: 700, height: 350 } }); await page.setContent('<main style="font:28px sans-serif;padding:24px"><h1>Receipt R-187</h1><p>Classroom Books</p><p>Total: EUR 42.50</p><p>Date not supplied</p></main>'); await page.screenshot({ path: image }); } finally { await browser.close(); }
+  const suppliedText = await readFile(text, 'utf8');
+  const expected = { receiptId: /^Receipt (.+)$/m.exec(suppliedText)?.[1], vendor: /^Vendor: (.+)$/m.exec(suppliedText)?.[1], currency: /^Total: ([A-Z]+) /m.exec(suppliedText)?.[1], total: Number(/^Total: [A-Z]+ ([\d.]+)$/m.exec(suppliedText)?.[1]), date: /^Date: not supplied$/m.test(suppliedText) ? null : /^Date: (.+)$/m.exec(suppliedText)?.[1], evidence: ['receipt.txt:1-4', 'receipt.png:visible receipt'] };
+  const observed = await native(mode === 'live' ? `Read both supplied files ${text} and ${image}. Extract receiptId, vendor, currency, total, date (null if missing), and evidence location strings. Return only grounded structured data.` : await readFile(text, 'utf8'), mode === 'live' ? { tools: ['Read'], allowedTools: ['Read'], canUseTool: async (_name, input) => typeof input.file_path === 'string' && [text, image].includes(path.resolve(input.file_path)) ? { behavior: 'allow', updatedInput: input } : { behavior: 'deny', message: 'Only the two supplied receipts are readable.' },
+    outputFormat: { type: 'json_schema', schema: { type: 'object', properties: { receiptId: { type: 'string' }, vendor: { type: 'string' }, currency: { type: 'string' }, total: { type: 'number' }, date: { type: ['string', 'null'] }, evidence: { type: 'array', items: { type: 'string' } } }, required: ['receiptId', 'vendor', 'currency', 'total', 'date', 'evidence'], additionalProperties: false } } } : {}, mode === 'live'); requireNative(observed, mode !== 'live');
+  const extracted = mode === 'live' ? observed.events.findLast(e => e.type === 'result')?.structured_output : expected;
+  const png = await readFile(image); const calls = observed.events.flatMap(e => e.type === 'assistant' ? e.message?.content || [] : []).filter(e => e.type === 'tool_use' && e.name === 'Read');
+  return report({ extraction: extracted, localExtraction: 'Deterministic supplied-text parser; local mode does not perform image OCR or model extraction', suppliedImage: 'receipt.png' }, { imageActuallyRendered: png.subarray(1, 4).toString() === 'PNG', groundedTotal: extracted?.total === 42.5, missingDateNull: extracted?.date === null, evidencePresent: extracted?.evidence?.length >= 2, liveReadBothSuppliedFiles: mode !== 'live' || [text, image].every(file => calls.some(call => path.resolve(call.input.file_path) === file)) }, observed, 'Owned synthetic receipt rendered to a real PNG and supplied with text. Live mode must read both files and satisfy structured evidence checks. Requires installed Chrome (or adapt channel for your browser).');
+}

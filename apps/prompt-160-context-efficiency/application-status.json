@@ -1,0 +1,12 @@
+{
+  "number": 160,
+  "title": "Context efficiency",
+  "application": "course-labs/prompt-160-context-efficiency",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:48.414Z"
+}

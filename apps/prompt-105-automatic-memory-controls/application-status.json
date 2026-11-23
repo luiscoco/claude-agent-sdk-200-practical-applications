@@ -1,0 +1,12 @@
+{
+  "number": 105,
+  "title": "Automatic memory controls",
+  "application": "course-labs/prompt-105-automatic-memory-controls",
+  "sourceChecks": "passed",
+  "localSdkChecks": "passed",
+  "browserChecks": "passed",
+  "liveStatus": "not_run_authentication_required",
+  "liveVerified": false,
+  "videoStatus": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T13:14:23.217Z"
+}

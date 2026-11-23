@@ -1,0 +1,1151 @@
+{
+  "generatedAt": "2026-11-23T10:53:22.228Z",
+  "scope": "Source-reference inventory, not behavioral verification",
+  "lessons": [
+    {
+      "number": 1,
+      "title": "Understand the SDK",
+      "application": "prompt-001-claude-ecosystem"
+    },
+    {
+      "number": 2,
+      "title": "Check versions",
+      "application": "prompt-002-check-versions"
+    },
+    {
+      "number": 3,
+      "title": "TypeScript setup",
+      "application": "prompt-003-typescript-setup"
+    },
+    {
+      "number": 4,
+      "title": "Python setup",
+      "application": "prompt-004-python-setup"
+    },
+    {
+      "number": 5,
+      "title": "Runtime requirements",
+      "application": "prompt-005-runtime-requirements"
+    },
+    {
+      "number": 6,
+      "title": "Anthropic authentication",
+      "application": "prompt-006-anthropic-authentication"
+    },
+    {
+      "number": 7,
+      "title": "Amazon Bedrock",
+      "application": "prompt-007-amazon-bedrock"
+    },
+    {
+      "number": 8,
+      "title": "Claude Platform on AWS",
+      "application": "prompt-008-claude-platform-on-aws"
+    },
+    {
+      "number": 9,
+      "title": "Google Cloud",
+      "application": "prompt-009-google-cloud"
+    },
+    {
+      "number": 10,
+      "title": "Microsoft Foundry",
+      "application": "prompt-010-microsoft-foundry"
+    },
+    {
+      "number": 11,
+      "title": "Working directory",
+      "application": "prompt-011-working-directory"
+    },
+    {
+      "number": 12,
+      "title": "Additional directories",
+      "application": "prompt-012-additional-directories"
+    },
+    {
+      "number": 13,
+      "title": "Settings sources",
+      "application": "prompt-013-settings-sources"
+    },
+    {
+      "number": 14,
+      "title": "Environment variables",
+      "application": "prompt-014-environment-variables"
+    },
+    {
+      "number": 15,
+      "title": "System-prompt choices",
+      "application": "prompt-015-system-prompt-choices"
+    },
+    {
+      "number": 16,
+      "title": "Extend the preset",
+      "application": "prompt-016-extend-preset"
+    },
+    {
+      "number": 17,
+      "title": "Project instructions",
+      "application": "prompt-017-project-instructions"
+    },
+    {
+      "number": 18,
+      "title": "Output styles",
+      "application": "prompt-018-output-styles"
+    },
+    {
+      "number": 19,
+      "title": "Model selection",
+      "application": "prompt-019-model-selection"
+    },
+    {
+      "number": 20,
+      "title": "Fallback models",
+      "application": "prompt-020-fallback-models"
+    },
+    {
+      "number": 21,
+      "title": "First query",
+      "application": "prompt-021-first-query"
+    },
+    {
+      "number": 22,
+      "title": "Agent loop",
+      "application": "prompt-022-agent-loop"
+    },
+    {
+      "number": 23,
+      "title": "Message types",
+      "application": "prompt-023-message-types"
+    },
+    {
+      "number": 24,
+      "title": "Completion handling",
+      "application": "prompt-024-completion-handling"
+    },
+    {
+      "number": 25,
+      "title": "Input modes",
+      "application": "prompt-025-input-modes"
+    },
+    {
+      "number": 26,
+      "title": "TypeScript conversation",
+      "application": "prompt-026-typescript-conversation"
+    },
+    {
+      "number": 27,
+      "title": "Python conversation",
+      "application": "prompt-027-python-conversation"
+    },
+    {
+      "number": 28,
+      "title": "Queued messages",
+      "application": "prompt-028-queued-messages"
+    },
+    {
+      "number": 29,
+      "title": "Interruptions",
+      "application": "prompt-029-interruptions"
+    },
+    {
+      "number": 30,
+      "title": "Resource cleanup",
+      "application": "prompt-030-resource-cleanup"
+    },
+    {
+      "number": 31,
+      "title": "Incremental text",
+      "application": "prompt-031-incremental-text"
+    },
+    {
+      "number": 32,
+      "title": "Duplicate prevention",
+      "application": "prompt-032-duplicate-prevention"
+    },
+    {
+      "number": 33,
+      "title": "Tool-call streaming",
+      "application": "prompt-033-tool-call-streaming"
+    },
+    {
+      "number": 34,
+      "title": "Image input",
+      "application": "prompt-034-image-input"
+    },
+    {
+      "number": 35,
+      "title": "JSON Schema",
+      "application": "prompt-035-json-schema"
+    },
+    {
+      "number": 36,
+      "title": "Zod integration",
+      "application": "prompt-036-zod-integration"
+    },
+    {
+      "number": 37,
+      "title": "Pydantic integration",
+      "application": "prompt-037-pydantic-integration"
+    },
+    {
+      "number": 38,
+      "title": "Complex results",
+      "application": "prompt-038-complex-results"
+    },
+    {
+      "number": 39,
+      "title": "Structured-output failures",
+      "application": "prompt-039-structured-output-failures"
+    },
+    {
+      "number": 40,
+      "title": "Business validation",
+      "application": "prompt-040-business-validation"
+    },
+    {
+      "number": 41,
+      "title": "Tool inventory",
+      "application": "prompt-041-tool-inventory"
+    },
+    {
+      "number": 42,
+      "title": "Read files",
+      "application": "prompt-042-read-files"
+    },
+    {
+      "number": 43,
+      "title": "Find and search",
+      "application": "prompt-043-find-and-search"
+    },
+    {
+      "number": 44,
+      "title": "Write files",
+      "application": "prompt-044-write-files"
+    },
+    {
+      "number": 45,
+      "title": "Targeted edits",
+      "application": "prompt-045-targeted-edits"
+    },
+    {
+      "number": 46,
+      "title": "Shell commands",
+      "application": "prompt-046-development-commands"
+    },
+    {
+      "number": 47,
+      "title": "Background commands",
+      "application": "prompt-047-background-commands"
+    },
+    {
+      "number": 48,
+      "title": "Notebook editing",
+      "application": "prompt-048-notebook-editing"
+    },
+    {
+      "number": 49,
+      "title": "Web search",
+      "application": "prompt-049-web-research"
+    },
+    {
+      "number": 50,
+      "title": "Web retrieval",
+      "application": "prompt-050-web-retrieval"
+    },
+    {
+      "number": 51,
+      "title": "TypeScript tool",
+      "application": "prompt-051-typescript-tool"
+    },
+    {
+      "number": 52,
+      "title": "Python tool",
+      "application": "prompt-052-python-tool"
+    },
+    {
+      "number": 53,
+      "title": "Tool registration",
+      "application": "prompt-053-tool-registration"
+    },
+    {
+      "number": 54,
+      "title": "Input schemas",
+      "application": "prompt-054-input-schemas"
+    },
+    {
+      "number": 55,
+      "title": "Tool descriptions",
+      "application": "prompt-055-tool-descriptions"
+    },
+    {
+      "number": 56,
+      "title": "Rich tool results",
+      "application": "prompt-056-rich-results"
+    },
+    {
+      "number": 57,
+      "title": "Handled errors",
+      "application": "prompt-057-handled-errors"
+    },
+    {
+      "number": 58,
+      "title": "Tool annotations",
+      "application": "prompt-058-tool-annotations"
+    },
+    {
+      "number": 59,
+      "title": "Handler authorization",
+      "application": "prompt-059-handler-authorization"
+    },
+    {
+      "number": 60,
+      "title": "Reliable handlers",
+      "application": "prompt-060-reliable-handlers"
+    },
+    {
+      "number": 61,
+      "title": "Local MCP server",
+      "application": "prompt-061-local-mcp"
+    },
+    {
+      "number": 62,
+      "title": "Remote MCP server",
+      "application": "prompt-062-remote-mcp"
+    },
+    {
+      "number": 63,
+      "title": "MCP configuration",
+      "application": "prompt-063-mcp-configuration"
+    },
+    {
+      "number": 64,
+      "title": "MCP authentication",
+      "application": "prompt-064-mcp-authentication"
+    },
+    {
+      "number": 65,
+      "title": "Connection states",
+      "application": "prompt-065-mcp-connection-states"
+    },
+    {
+      "number": 66,
+      "title": "MCP resources",
+      "application": "prompt-066-mcp-resources"
+    },
+    {
+      "number": 67,
+      "title": "MCP permissions",
+      "application": "prompt-067-mcp-permissions"
+    },
+    {
+      "number": 68,
+      "title": "Tool search",
+      "application": "prompt-068-tool-search"
+    },
+    {
+      "number": 69,
+      "title": "MCP elicitation",
+      "application": "prompt-069-mcp-elicitation"
+    },
+    {
+      "number": 70,
+      "title": "MCP recovery",
+      "application": "prompt-070-mcp-recovery"
+    },
+    {
+      "number": 71,
+      "title": "Availability versus approval",
+      "application": "prompt-071-availability-approval"
+    },
+    {
+      "number": 72,
+      "title": "Permission precedence",
+      "application": "prompt-072-permission-precedence"
+    },
+    {
+      "number": 73,
+      "title": "Interactive versus unattended",
+      "application": "prompt-073-interactive-unattended"
+    },
+    {
+      "number": 74,
+      "title": "Planning and editing",
+      "application": "prompt-074-planning-editing"
+    },
+    {
+      "number": 75,
+      "title": "Advanced permission modes",
+      "application": "prompt-075-advanced-permissions"
+    },
+    {
+      "number": 76,
+      "title": "Approval callback",
+      "application": "prompt-076-approval-callback"
+    },
+    {
+      "number": 77,
+      "title": "Clarifying questions",
+      "application": "prompt-077-clarifying-questions"
+    },
+    {
+      "number": 78,
+      "title": "Approval interface",
+      "application": "prompt-078-approval-interface"
+    },
+    {
+      "number": 79,
+      "title": "Deferred approval",
+      "application": "prompt-079-deferred-approval"
+    },
+    {
+      "number": 80,
+      "title": "MCP-specific policy",
+      "application": "prompt-080-mcp-policy"
+    },
+    {
+      "number": 81,
+      "title": "Hook inventory",
+      "application": "prompt-081-hook-inventory"
+    },
+    {
+      "number": 82,
+      "title": "Pre-tool enforcement",
+      "application": "prompt-082-pre-tool-enforcement"
+    },
+    {
+      "number": 83,
+      "title": "Input modification",
+      "application": "prompt-083-input-modification"
+    },
+    {
+      "number": 84,
+      "title": "Output modification",
+      "application": "prompt-084-output-modification"
+    },
+    {
+      "number": 85,
+      "title": "Tool failures",
+      "application": "prompt-085-tool-failures"
+    },
+    {
+      "number": 86,
+      "title": "Prompt and stop hooks",
+      "application": "prompt-086-prompt-stop-hooks"
+    },
+    {
+      "number": 87,
+      "title": "Subagent hooks",
+      "application": "prompt-087-subagent-hooks"
+    },
+    {
+      "number": 88,
+      "title": "Session lifecycle",
+      "application": "prompt-088-session-lifecycle"
+    },
+    {
+      "number": 89,
+      "title": "Context lifecycle",
+      "application": "prompt-089-context-lifecycle"
+    },
+    {
+      "number": 90,
+      "title": "Hook reliability",
+      "application": "prompt-090-hook-reliability"
+    },
+    {
+      "number": 91,
+      "title": "Capture session IDs",
+      "application": "prompt-091-capture-session-ids"
+    },
+    {
+      "number": 92,
+      "title": "Follow-up questions",
+      "application": "prompt-092-follow-up-questions"
+    },
+    {
+      "number": 93,
+      "title": "Resume after restart",
+      "application": "prompt-093-resume-after-restart"
+    },
+    {
+      "number": 94,
+      "title": "Continue latest session",
+      "application": "prompt-094-continue-latest-session"
+    },
+    {
+      "number": 95,
+      "title": "Fork a conversation",
+      "application": "prompt-095-fork-a-conversation"
+    },
+    {
+      "number": 96,
+      "title": "Session browser",
+      "application": "prompt-096-session-browser"
+    },
+    {
+      "number": 97,
+      "title": "Session organization",
+      "application": "prompt-097-session-organization"
+    },
+    {
+      "number": 98,
+      "title": "Resume boundaries",
+      "application": "prompt-098-resume-boundaries"
+    },
+    {
+      "number": 99,
+      "title": "Persistence controls",
+      "application": "prompt-099-persistence-controls"
+    },
+    {
+      "number": 100,
+      "title": "Retention and deletion",
+      "application": "prompt-100-retention-and-deletion"
+    },
+    {
+      "number": 101,
+      "title": "Context usage",
+      "application": "prompt-101-context-usage"
+    },
+    {
+      "number": 102,
+      "title": "Automatic compaction",
+      "application": "prompt-102-automatic-compaction"
+    },
+    {
+      "number": 103,
+      "title": "Compact versus clear",
+      "application": "prompt-103-compact-versus-clear"
+    },
+    {
+      "number": 104,
+      "title": "Memory distinctions",
+      "application": "prompt-104-memory-distinctions"
+    },
+    {
+      "number": 105,
+      "title": "Automatic memory controls",
+      "application": "prompt-105-automatic-memory-controls"
+    },
+    {
+      "number": 106,
+      "title": "External session store",
+      "application": "prompt-106-external-session-store"
+    },
+    {
+      "number": 107,
+      "title": "Cross-host resumption",
+      "application": "prompt-107-cross-host-resumption"
+    },
+    {
+      "number": 108,
+      "title": "Storage failures",
+      "application": "prompt-108-storage-failures"
+    },
+    {
+      "number": 109,
+      "title": "Adapter conformance",
+      "application": "prompt-109-adapter-conformance"
+    },
+    {
+      "number": 110,
+      "title": "Context reduction",
+      "application": "prompt-110-context-reduction"
+    },
+    {
+      "number": 111,
+      "title": "Define specialists",
+      "application": "prompt-111-define-specialists"
+    },
+    {
+      "number": 112,
+      "title": "Filesystem agents",
+      "application": "prompt-112-filesystem-agents"
+    },
+    {
+      "number": 113,
+      "title": "Delegation selection",
+      "application": "prompt-113-delegation-selection"
+    },
+    {
+      "number": 114,
+      "title": "Agent configuration",
+      "application": "prompt-114-agent-configuration"
+    },
+    {
+      "number": 115,
+      "title": "Execution modes",
+      "application": "prompt-115-execution-modes"
+    },
+    {
+      "number": 116,
+      "title": "Parallel work",
+      "application": "prompt-116-parallel-work"
+    },
+    {
+      "number": 117,
+      "title": "Agent teams",
+      "application": "prompt-117-agent-teams"
+    },
+    {
+      "number": 118,
+      "title": "Resume a subagent",
+      "application": "prompt-118-resume-a-subagent"
+    },
+    {
+      "number": 119,
+      "title": "Forked subagents",
+      "application": "prompt-119-forked-subagents"
+    },
+    {
+      "number": 120,
+      "title": "Nested-agent limits",
+      "application": "prompt-120-nested-agent-limits"
+    },
+    {
+      "number": 121,
+      "title": "Create a skill",
+      "application": "prompt-121-create-a-skill"
+    },
+    {
+      "number": 122,
+      "title": "Skill discovery",
+      "application": "prompt-122-skill-discovery"
+    },
+    {
+      "number": 123,
+      "title": "Skill selection",
+      "application": "prompt-123-skill-selection"
+    },
+    {
+      "number": 124,
+      "title": "Skill commands",
+      "application": "prompt-124-skill-commands"
+    },
+    {
+      "number": 125,
+      "title": "Legacy commands",
+      "application": "prompt-125-legacy-commands"
+    },
+    {
+      "number": 126,
+      "title": "Supporting resources",
+      "application": "prompt-126-supporting-resources"
+    },
+    {
+      "number": 127,
+      "title": "Create a plugin",
+      "application": "prompt-127-create-a-plugin"
+    },
+    {
+      "number": 128,
+      "title": "Load plugins",
+      "application": "prompt-128-load-plugins"
+    },
+    {
+      "number": 129,
+      "title": "Reload extensions",
+      "application": "prompt-129-reload-extensions"
+    },
+    {
+      "number": 130,
+      "title": "Extension diagnostics",
+      "application": "prompt-130-extension-diagnostics"
+    },
+    {
+      "number": 131,
+      "title": "Capability negotiation",
+      "application": "prompt-131-capability-negotiation"
+    },
+    {
+      "number": 132,
+      "title": "Runtime switching",
+      "application": "prompt-132-runtime-switching"
+    },
+    {
+      "number": 133,
+      "title": "Live settings",
+      "application": "prompt-133-live-settings"
+    },
+    {
+      "number": 134,
+      "title": "Early startup",
+      "application": "prompt-134-early-startup"
+    },
+    {
+      "number": 135,
+      "title": "Reload runtime content",
+      "application": "prompt-135-reload-runtime-content"
+    },
+    {
+      "number": 136,
+      "title": "Custom process transport",
+      "application": "prompt-136-custom-process-transport"
+    },
+    {
+      "number": 137,
+      "title": "Host-managed reads",
+      "application": "prompt-137-host-managed-reads"
+    },
+    {
+      "number": 138,
+      "title": "Dynamic MCP management",
+      "application": "prompt-138-dynamic-mcp-management"
+    },
+    {
+      "number": 139,
+      "title": "Tool routing",
+      "application": "prompt-139-tool-routing"
+    },
+    {
+      "number": 140,
+      "title": "MCP background tasks",
+      "application": "prompt-140-mcp-background-tasks"
+    },
+    {
+      "number": 141,
+      "title": "Task progress",
+      "application": "prompt-141-task-progress"
+    },
+    {
+      "number": 142,
+      "title": "Background lifecycle",
+      "application": "prompt-142-background-lifecycle"
+    },
+    {
+      "number": 143,
+      "title": "Dynamic workflow",
+      "application": "prompt-143-dynamic-workflow"
+    },
+    {
+      "number": 144,
+      "title": "Workflow resumption",
+      "application": "prompt-144-workflow-resumption"
+    },
+    {
+      "number": 145,
+      "title": "Optional runtime tools",
+      "application": "prompt-145-optional-runtime-tools"
+    },
+    {
+      "number": 146,
+      "title": "Worktree isolation",
+      "application": "prompt-146-worktree-isolation"
+    },
+    {
+      "number": 147,
+      "title": "Enable checkpoints",
+      "application": "prompt-147-enable-checkpoints"
+    },
+    {
+      "number": 148,
+      "title": "Rewind edits",
+      "application": "prompt-148-rewind-edits"
+    },
+    {
+      "number": 149,
+      "title": "Resume and restore",
+      "application": "prompt-149-resume-and-restore"
+    },
+    {
+      "number": 150,
+      "title": "Rollback boundaries",
+      "application": "prompt-150-rollback-boundaries"
+    },
+    {
+      "number": 151,
+      "title": "Usage report",
+      "application": "prompt-151-usage-report"
+    },
+    {
+      "number": 152,
+      "title": "Avoid double counting",
+      "application": "prompt-152-avoid-double-counting"
+    },
+    {
+      "number": 153,
+      "title": "Session accounting",
+      "application": "prompt-153-session-accounting"
+    },
+    {
+      "number": 154,
+      "title": "Turn limits",
+      "application": "prompt-154-turn-limits"
+    },
+    {
+      "number": 155,
+      "title": "Spending limits",
+      "application": "prompt-155-spending-limits"
+    },
+    {
+      "number": 156,
+      "title": "Per-model reporting",
+      "application": "prompt-156-per-model-reporting"
+    },
+    {
+      "number": 157,
+      "title": "Prompt caching",
+      "application": "prompt-157-prompt-caching"
+    },
+    {
+      "number": 158,
+      "title": "Thinking and effort",
+      "application": "prompt-158-thinking-and-effort"
+    },
+    {
+      "number": 159,
+      "title": "Model comparison",
+      "application": "prompt-159-model-comparison"
+    },
+    {
+      "number": 160,
+      "title": "Context efficiency",
+      "application": "prompt-160-context-efficiency"
+    },
+    {
+      "number": 161,
+      "title": "Structured logging",
+      "application": "prompt-161-structured-logging"
+    },
+    {
+      "number": 162,
+      "title": "Correlation identifiers",
+      "application": "prompt-162-correlation-identifiers"
+    },
+    {
+      "number": 163,
+      "title": "OpenTelemetry metrics",
+      "application": "prompt-163-opentelemetry-metrics"
+    },
+    {
+      "number": 164,
+      "title": "Tracing",
+      "application": "prompt-164-tracing"
+    },
+    {
+      "number": 165,
+      "title": "Telemetry diagnostics",
+      "application": "prompt-165-telemetry-diagnostics"
+    },
+    {
+      "number": 166,
+      "title": "Startup failures",
+      "application": "prompt-166-startup-failures"
+    },
+    {
+      "number": 167,
+      "title": "Stalled responses",
+      "application": "prompt-167-stalled-responses"
+    },
+    {
+      "number": 168,
+      "title": "Rate limits",
+      "application": "prompt-168-rate-limits"
+    },
+    {
+      "number": 169,
+      "title": "Tool diagnostics",
+      "application": "prompt-169-tool-diagnostics"
+    },
+    {
+      "number": 170,
+      "title": "Final-event handling",
+      "application": "prompt-170-final-event-handling"
+    },
+    {
+      "number": 171,
+      "title": "Container deployment",
+      "application": "prompt-171-container-deployment"
+    },
+    {
+      "number": 172,
+      "title": "Runtime suitability",
+      "application": "prompt-172-runtime-suitability"
+    },
+    {
+      "number": 173,
+      "title": "Worker scaling",
+      "application": "prompt-173-worker-scaling"
+    },
+    {
+      "number": 174,
+      "title": "Tenant isolation",
+      "application": "prompt-174-tenant-isolation"
+    },
+    {
+      "number": 175,
+      "title": "Command sandbox",
+      "application": "prompt-175-command-sandbox"
+    },
+    {
+      "number": 176,
+      "title": "Network controls",
+      "application": "prompt-176-network-controls"
+    },
+    {
+      "number": 177,
+      "title": "Credential separation",
+      "application": "prompt-177-credential-separation"
+    },
+    {
+      "number": 178,
+      "title": "Injection resistance",
+      "application": "prompt-178-injection-resistance"
+    },
+    {
+      "number": 179,
+      "title": "Graceful shutdown",
+      "application": "prompt-179-graceful-shutdown"
+    },
+    {
+      "number": 180,
+      "title": "Application packaging",
+      "application": "prompt-180-application-packaging"
+    },
+    {
+      "number": 181,
+      "title": "Retrieval-augmented generation",
+      "application": "prompt-181-retrieval-augmented-generation"
+    },
+    {
+      "number": 182,
+      "title": "Application memory",
+      "application": "prompt-182-application-memory"
+    },
+    {
+      "number": 183,
+      "title": "REST service",
+      "application": "prompt-183-rest-service"
+    },
+    {
+      "number": 184,
+      "title": "Streaming service",
+      "application": "prompt-184-streaming-service"
+    },
+    {
+      "number": 185,
+      "title": "Chat interface",
+      "application": "prompt-185-chat-interface"
+    },
+    {
+      "number": 186,
+      "title": "Database assistant",
+      "application": "prompt-186-database-assistant"
+    },
+    {
+      "number": 187,
+      "title": "Document extraction",
+      "application": "prompt-187-document-extraction"
+    },
+    {
+      "number": 188,
+      "title": "Coding assistant",
+      "application": "prompt-188-coding-assistant"
+    },
+    {
+      "number": 189,
+      "title": "Business workflow",
+      "application": "prompt-189-business-workflow"
+    },
+    {
+      "number": 190,
+      "title": "Durable jobs",
+      "application": "prompt-190-durable-jobs"
+    },
+    {
+      "number": 191,
+      "title": "Tool unit tests",
+      "application": "prompt-191-tool-unit-tests"
+    },
+    {
+      "number": 192,
+      "title": "Recorded-event tests",
+      "application": "prompt-192-recorded-event-tests"
+    },
+    {
+      "number": 193,
+      "title": "End-to-end scenarios",
+      "application": "prompt-193-end-to-end-scenarios"
+    },
+    {
+      "number": 194,
+      "title": "Failure scenarios",
+      "application": "prompt-194-failure-scenarios"
+    },
+    {
+      "number": 195,
+      "title": "Quality evaluation",
+      "application": "prompt-195-quality-evaluation"
+    },
+    {
+      "number": 196,
+      "title": "Performance regression",
+      "application": "prompt-196-performance-regression"
+    },
+    {
+      "number": 197,
+      "title": "Language portability",
+      "application": "prompt-197-language-portability"
+    },
+    {
+      "number": 198,
+      "title": "Legacy migration",
+      "application": "prompt-198-legacy-migration"
+    },
+    {
+      "number": 199,
+      "title": "Upgrade review",
+      "application": "prompt-199-upgrade-review"
+    },
+    {
+      "number": 200,
+      "title": "Final capability audit",
+      "application": "prompt-200-final-capability-audit"
+    }
+  ],
+  "references": {
+    "forkSession": [
+      95
+    ],
+    "getSessionMessages": [
+      95,
+      103,
+      107
+    ],
+    "close": [
+      107,
+      109,
+      134,
+      163,
+      164,
+      165,
+      176,
+      179,
+      183,
+      184,
+      185,
+      186,
+      187,
+      197,
+      198
+    ],
+    "tool": [
+      110,
+      114,
+      117,
+      123,
+      126,
+      138,
+      139,
+      140,
+      141,
+      143,
+      146,
+      154,
+      160,
+      162,
+      164,
+      167,
+      169,
+      176,
+      177,
+      178,
+      182,
+      185,
+      186,
+      191,
+      195,
+      199
+    ],
+    "createSdkMcpServer": [
+      114,
+      139,
+      167,
+      199
+    ],
+    "query": [
+      119,
+      120,
+      134,
+      147,
+      155,
+      156,
+      179,
+      181,
+      186,
+      198,
+      199,
+      200
+    ],
+    "mcpServerStatus": [
+      127,
+      138,
+      200
+    ],
+    "supportedCommands": [
+      129,
+      135
+    ],
+    "reloadSkills": [
+      129,
+      135
+    ],
+    "startup": [
+      130,
+      134,
+      166
+    ],
+    "interrupt": [
+      131
+    ],
+    "setPermissionMode": [
+      132
+    ],
+    "setModel": [
+      132
+    ],
+    "supportedModels": [
+      132,
+      159
+    ],
+    "resolveSettings": [
+      133
+    ],
+    "updateSettings": [
+      133
+    ],
+    "prewarm": [
+      134
+    ],
+    "reloadOutputStyles": [
+      135
+    ],
+    "seedReadState": [
+      137
+    ],
+    "reconnectMcpServer": [
+      138
+    ],
+    "toggleMcpServer": [
+      138
+    ],
+    "setMcpServers": [
+      138
+    ],
+    "accountInfo": [
+      140
+    ],
+    "supportedAgents": [
+      142
+    ],
+    "stopTask": [
+      142
+    ],
+    "importSessionToStore": [
+      199
+    ],
+    "initializationResult": [
+      200
+    ]
+  }
+}

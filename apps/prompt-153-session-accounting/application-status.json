@@ -1,0 +1,12 @@
+{
+  "number": 153,
+  "title": "Session accounting",
+  "application": "course-labs/prompt-153-session-accounting",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:48.045Z"
+}

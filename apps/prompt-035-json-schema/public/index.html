@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 35 · JSON Schema Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 35</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>JSON<br /><em>Schema</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Configure outputFormat and read the actual structured_output on the SDK result.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Extract workshop facts into a native structured result</h2>
+          <p class="intro">
+            A small JSON Schema defines strings, an integer, an array and a boolean.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">{ }</span>
+              <h3>Supplied workshop facts</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Classroom task<select id="task">
+                  <option value="basics">Agent SDK Basics</option>
+                  <option value="streaming">Streaming Lab</option>
+                </select></label
+              ><label
+                >Schema mode<select id="mode">
+                  <option value="valid">Valid draft-07 schema</option>
+                  <option value="invalid-schema">Deliberate malformed required field</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Run structured extraction</button
+              ><button id="repair" class="secondary">Restore required array</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the classroom schema and facts.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Structured output</span><strong id="shape">—</strong></article>
+            <article><span>Returned object fields</span><strong id="fields">—</strong></article>
+            <article><span>Independent facts check</span><strong id="matched">—</strong></article>
+            <article><span>Observed SDK frames</span><strong id="frames">—</strong></article>
+          </section>
+          <div class="columns">
+            <section class="panel schema-panel">
+              <div class="heading">
+                <span class="icon blue">⌘</span>
+                <h3>Actual output-format schema</h3>
+              </div>
+              <pre id="schema"></pre>
+            </section>
+            <section class="panel output-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Native result.structured_output</h3>
+              </div>
+              <pre id="output">Awaiting the real SDK result.</pre>
+              <pre id="metadata"></pre>
+              <a id="download" class="secondary hidden" download
+                >Download observed structured-output report</a
+              >
+            </section>
+          </div>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual JSON Schema implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 35 · JSON Schema</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original JSON Schema infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 35 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

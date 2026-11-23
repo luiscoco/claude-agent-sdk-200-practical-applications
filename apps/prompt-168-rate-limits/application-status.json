@@ -1,0 +1,12 @@
+{
+  "number": 168,
+  "title": "Rate limits",
+  "application": "course-labs/prompt-168-rate-limits",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:48.826Z"
+}

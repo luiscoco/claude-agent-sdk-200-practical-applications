@@ -1,0 +1,17 @@
+name: Public source checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  inventory-and-publish-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check 200 apps, documentation links, file sizes and excluded content
+        run: node scripts/verify-public.mjs

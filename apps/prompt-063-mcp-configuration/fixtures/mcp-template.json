@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "catalog": {
+      "type": "stdio",
+      "command": "{{node}}",
+      "args": [
+        "{{server}}",
+        "{{catalog}}",
+        "{{audit}}"
+      ],
+      "alwaysLoad": true
+    }
+  }
+}

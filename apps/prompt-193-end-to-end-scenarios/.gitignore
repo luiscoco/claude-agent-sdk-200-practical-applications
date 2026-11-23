@@ -1,0 +1,8 @@
+node_modules/
+runs/
+recordings/
+.env
+.env.*
+!.env.example
+last-report.json
+verification-live.json

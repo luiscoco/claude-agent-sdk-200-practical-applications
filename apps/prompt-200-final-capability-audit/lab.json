@@ -1,0 +1,34 @@
+{
+  "number": 200,
+  "title": "Final capability audit",
+  "prompt": "Compare these exercises with every public capability in my installed SDK references; add runnable examples for uncovered supported features.",
+  "port": 43300,
+  "scope": "Exercise actual local runtime controls and owned fixtures. Live mode verifies the corresponding model/tool behavior with native evidence. Local success does not certify live inference.",
+  "modes": [
+    {
+      "id": "local",
+      "label": "Local native discovery and controls",
+      "description": "Actual SDK operations with zero model turns. This does not certify the live model scenario."
+    },
+    {
+      "id": "live",
+      "label": "Live model scenario",
+      "description": "Actual model calls with bounded turns, cost and time. Requires locally configured replacement credentials and uses account credits."
+    }
+  ],
+  "sources": [
+    "src/lesson.ts",
+    "src/application.ts",
+    "src/exercise.ts",
+    "src/service.ts",
+    "src/streaming.ts",
+    "src/conversation.ts",
+    "src/capabilities.ts",
+    "src/checkpoints.ts",
+    "src/accounting.ts",
+    "src/mcp-fixture.ts",
+    "src/native.ts",
+    "src/launch.ts",
+    "src/server.ts"
+  ]
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 29 · Interruption Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 29</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Active Turn<br /><em>Interruptions</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Interrupt the waiting turn, drain its remaining events, then send a new instruction.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Interrupt an active turn and continue the conversation</h2>
+          <p class="intro">
+            A real foreground Bash wait keeps the classroom turn active for interruption.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">◼</span>
+              <h3>Streaming session control</h3>
+              <span id="status" class="badge">Ready</span>
+            </div>
+            <div class="controls">
+              <button id="start" class="primary">▶ Start waiting turn</button
+              ><button id="interrupt" class="secondary" disabled>Interrupt active turn</button
+              ><button id="close" class="secondary" disabled>Close session</button>
+            </div>
+            <p id="progress">
+              Start the turn, then interrupt after the actual Bash tool request appears.
+            </p>
+            <label class="prompt-label" for="prompt"
+              >New instruction after the interrupted result</label
+            ><textarea id="prompt">Reply with exactly CONTINUED</textarea>
+            <div class="controls followup-controls">
+              <button id="continue" class="primary" disabled>Send new instruction</button
+              ><button id="repair" class="secondary">Restore follow-up text</button>
+            </div>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Current stage</span><strong id="stage">—</strong></article>
+            <article><span>Interrupt receipt</span><strong id="receipt">—</strong></article>
+            <article><span>Native turn results</span><strong id="count">—</strong></article>
+            <article><span>Session continuity</span><strong id="continuity">—</strong></article>
+          </section>
+          <div class="columns">
+            <section class="panel events-panel">
+              <div class="heading">
+                <span class="icon blue">≡</span>
+                <h3>Observed event order</h3>
+              </div>
+              <div id="events"><p class="empty">Awaiting actual SDK events.</p></div>
+            </section>
+            <section class="panel results-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Actual result boundaries</h3>
+              </div>
+              <div id="results"><p class="empty">Awaiting actual native results.</p></div>
+              <p id="native-session"></p>
+              <a id="download" class="secondary hidden" download
+                >Download observed interruption report</a
+              >
+            </section>
+          </div>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual interruption implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 29 · Interruptions</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original interruptions infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 29 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

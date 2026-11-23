@@ -1,0 +1,11 @@
+import path from 'node:path';
+import { readFile } from 'node:fs/promises';
+import { RunService } from './service.js';
+const mode=process.argv.includes('--agent')?'agent':'verify';
+const fixture=process.argv.includes('--invalid')?'invalid':'valid';
+const text=await readFile(path.resolve('fixtures',fixture+'.txt'),'utf8');
+const run=new RunService(path.resolve('runs')).start(mode,text);
+run.listeners.add(event=>console.log(`[${event.type}] ${event.title}: ${event.detail}`));
+await run.finished;
+console.log(JSON.stringify(run.report||run.error,null,2));
+if(run.status!=='completed')process.exitCode=1;

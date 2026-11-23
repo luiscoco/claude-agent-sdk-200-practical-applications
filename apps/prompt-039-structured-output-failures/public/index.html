@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 39 · Structured Failures Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 39</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Structured<br /><em>Failures</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Handle retry exhaustion, unsuccessful results and absent structured data before using a
+          result.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Preserve the native failure and withhold application use</h2>
+          <p class="intro">
+            Inspect actual retries, native result errors and the following iterator exception.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">{ }</span>
+              <h3>Structured-output experiment</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Classroom scenario<select id="mode">
+                  <option value="exhausted">Exhaust retries · contradictory count limits</option>
+                  <option value="missing-output">Omit outputFormat · successful plain text</option>
+                  <option value="turn-limit">Stop after one agent-loop turn</option>
+                  <option value="repaired">Repair schema and return count 2</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Run real scenario</button>
+              <button id="repair" class="secondary">Restore a satisfiable schema</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the classroom facts.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Native result subtype</span><strong id="subtype">—</strong></article>
+            <article>
+              <span>Actual StructuredOutput attempts</span><strong id="attempt-count">—</strong>
+            </article>
+            <article><span>Application guard</span><strong id="outcome">—</strong></article>
+            <article><span>Typed consumer</span><strong id="consumer">—</strong></article>
+          </section>
+          <div class="result-columns">
+            <section class="panel result-panel">
+              <div class="heading">
+                <span class="icon orange">!</span>
+                <h3>Actual native result and iterator</h3>
+              </div>
+              <pre id="native">Awaiting the native run.</pre>
+            </section>
+            <section class="panel attempt-panel">
+              <div class="heading">
+                <span class="icon blue">↻</span>
+                <h3>Actual structured-output attempts</h3>
+              </div>
+              <pre id="attempts">Awaiting tool calls and validation results.</pre>
+            </section>
+            <section class="panel raw-panel">
+              <div class="heading">
+                <span class="icon blue">⇢</span>
+                <h3>Actual structured data</h3>
+              </div>
+              <pre id="raw">Awaiting the result.</pre>
+            </section>
+            <section class="panel typed-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Guarded application result</h3>
+              </div>
+              <pre id="typed">Awaiting guarded application use.</pre>
+            </section>
+          </div>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed structured-failure report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual result and exception handling</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 39 · Structured-output failures</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Structured-output failures infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 39 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

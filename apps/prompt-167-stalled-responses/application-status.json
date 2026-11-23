@@ -1,0 +1,12 @@
+{
+  "number": 167,
+  "title": "Stalled responses",
+  "application": "course-labs/prompt-167-stalled-responses",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:48.773Z"
+}

@@ -1,0 +1,12 @@
+{
+  "number": 147,
+  "title": "Enable checkpoints",
+  "application": "course-labs/prompt-147-enable-checkpoints",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:23.283Z"
+}

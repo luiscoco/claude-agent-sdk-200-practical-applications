@@ -1,0 +1,12 @@
+{
+  "number": 119,
+  "title": "Forked subagents",
+  "application": "course-labs/prompt-119-forked-subagents",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T19:49:26.499Z"
+}

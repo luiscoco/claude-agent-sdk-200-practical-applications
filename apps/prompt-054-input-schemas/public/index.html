@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 54 · Nested Input Schemas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 54</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Nested<br /><em>Inputs</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Define nested tool inputs, apply optional-field defaults and reject invalid values inside
+          the actual handler.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Validate a nested order inside the actual custom-tool handler</h2>
+          <p class="intro">
+            Compare requested nested arguments with handler normalization, defaults and actual
+            native outcomes.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">±</span>
+              <h3>Actual nested-input experiment</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label class="json-input"
+                >Nested tool arguments<textarea
+                  id="arguments"
+                  rows="11"
+                  spellcheck="false"
+                ></textarea>
+              </label>
+              <button id="inspect" class="primary" disabled>▶ Call actual order tool</button>
+              <button id="failure" class="secondary">Try quantity zero</button>
+              <button id="repair" class="secondary">Restore omitted defaults</button>
+              <button id="options" class="secondary">Use explicit options</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the nested-input settings.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Handler validation</span><strong id="handler-result">—</strong></article>
+            <article>
+              <span>Actual quote in cents</span><strong id="native-result-value">—</strong>
+            </article>
+            <article><span>Handler defaults</span><strong id="final-result">—</strong></article>
+            <article>
+              <span>Actual handler executions</span><strong id="execution-count">—</strong>
+            </article>
+          </section>
+          <div class="outcome-panels">
+            <section class="panel handler-panel">
+              <div class="heading">
+                <span class="icon orange">ƒ</span>
+                <h3>Actual normalized handler input</h3>
+              </div>
+              <pre id="handler"></pre>
+            </section>
+            <section class="panel native-result-panel">
+              <div class="heading">
+                <span class="icon mint">⇢</span>
+                <h3>Actual native tool outcome</h3>
+              </div>
+              <pre id="native-result"></pre>
+            </section>
+            <section class="panel final-panel">
+              <div class="heading">
+                <span class="icon blue">{ }</span>
+                <h3>Actual final outcome summary</h3>
+              </div>
+              <pre id="final-output"></pre>
+            </section>
+          </div>
+          <section class="panel verification-panel checks-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Actual input, handler and native-result checks</h3>
+            </div>
+            <pre id="checks"></pre>
+            <pre id="provenance"></pre>
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Actual nested tool call and native results</h3>
+            </div>
+            <pre id="evidence"></pre>
+            <details>
+              <summary>Preserved native tool results and lifecycle hooks</summary>
+              <pre id="tool-results"></pre>
+            </details>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed input-schema report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual nested schemas, defaults and handler code</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 54 · Input schemas</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original input schemas infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 54 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

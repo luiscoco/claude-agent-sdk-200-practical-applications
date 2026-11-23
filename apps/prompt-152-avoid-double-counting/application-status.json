@@ -1,0 +1,12 @@
+{
+  "number": 152,
+  "title": "Avoid double counting",
+  "application": "course-labs/prompt-152-avoid-double-counting",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:47.992Z"
+}

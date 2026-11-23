@@ -1,0 +1,3 @@
+Course: Claude Agent SDK
+Instructor: Luis Coco Enríquez
+Session marker: STREAM-CORAL

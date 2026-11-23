@@ -1,0 +1,12 @@
+{
+  "number": 141,
+  "title": "Task progress",
+  "application": "course-labs/prompt-141-task-progress",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:22.827Z"
+}

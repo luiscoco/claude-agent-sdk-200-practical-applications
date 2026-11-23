@@ -1,0 +1,12 @@
+{
+  "number": 106,
+  "title": "External session store",
+  "application": "course-labs/prompt-106-external-session-store",
+  "sourceChecks": "passed",
+  "localSdkChecks": "passed",
+  "browserChecks": "passed",
+  "liveStatus": "not_run_authentication_required",
+  "liveVerified": false,
+  "videoStatus": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T13:14:23.335Z"
+}

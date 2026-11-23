@@ -1,0 +1,25 @@
+{
+  "disclosure": "Sanitized historical native SDK transcripts from owned synthetic Prompt 89 classroom experiments. Machine-specific paths were replaced with classroom paths. Session/message identities and conversation content are retained; sha256 covers each sanitized fixture, originalSha256 records its source provenance. These are recorded fixtures, not new model runs.",
+  "sessions": [
+    {
+      "alias": "switch",
+      "label": "Allowed model-switch classroom run",
+      "sessionId": "d9be88a3-6f07-404f-9d8d-5ecdc4e3c9d4",
+      "projectDirectory": "/classroom/prompt-089/switch",
+      "file": "native-config/projects/classroom-switch/d9be88a3-6f07-404f-9d8d-5ecdc4e3c9d4.jsonl",
+      "sha256": "8efb98dfd56d7f731ad65c5a74ac45f6e3e6bce3f28dcfab4e02518f2ff3fbd4",
+      "sourceEvidence": "course-labs/prompt-089-context-lifecycle/recordings/browser-switch-evidence.json",
+      "originalSha256": "5e8748e5c62a8ec58a8833de17354946379dab29c73f953acb352951418ac636"
+    },
+    {
+      "alias": "denied",
+      "label": "Denied model-switch classroom run",
+      "sessionId": "8525ff1b-3676-43b8-80f9-e6018c060010",
+      "projectDirectory": "/classroom/prompt-089/denied",
+      "file": "native-config/projects/classroom-denied/8525ff1b-3676-43b8-80f9-e6018c060010.jsonl",
+      "sha256": "1e9b06630d7051e91586358a13529d55e4e2b203ac0694b974874d1497537c4c",
+      "sourceEvidence": "course-labs/prompt-089-context-lifecycle/recordings/browser-deny-switch-evidence.json",
+      "originalSha256": "d8b8cfb5f1592a61080b0cfa3342dfb0861affa5565df9d7ace21f1c9408f7ca"
+    }
+  ]
+}

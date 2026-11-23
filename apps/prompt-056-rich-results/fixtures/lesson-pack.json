@@ -1,0 +1,9 @@
+{
+  "lessonNumber": 56,
+  "title": "Classroom resource sample",
+  "sections": [
+    "Read reference text",
+    "Inspect embedded JSON",
+    "Validate structured data"
+  ]
+}

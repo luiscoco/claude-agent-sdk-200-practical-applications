@@ -1,0 +1,12 @@
+{
+  "number": 142,
+  "title": "Background lifecycle",
+  "application": "course-labs/prompt-142-background-lifecycle",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:22.897Z"
+}

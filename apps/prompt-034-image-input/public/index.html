@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 34 · Image Input Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 34</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Image<br /><em>Input</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">Send image bytes and a text question together in one SDK user message.</p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Ask the real SDK to explain an image</h2>
+          <p class="intro">
+            Use the original course infographic or upload a PNG or JPEG up to this lab’s 5 MiB
+            limit.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">▧</span>
+              <h3>Image and text content blocks</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Image source<select id="source-mode">
+                  <option value="demo">Original main infographic</option>
+                  <option value="upload">Uploaded PNG or JPEG</option>
+                  <option value="wrong-mime">Deliberate media-type mismatch</option>
+                </select></label
+              ><label
+                >Choose a local image<input
+                  id="image-file"
+                  type="file"
+                  accept="image/png,image/jpeg"
+              /></label>
+            </div>
+            <label class="prompt-label" for="question">Question about the image</label
+            ><textarea id="question" maxlength="2000"></textarea>
+            <div class="controls">
+              <button id="inspect" class="primary" disabled>▶ Analyze real image input</button
+              ><button id="repair" class="secondary">Restore original PNG input</button>
+            </div>
+            <p id="progress">Loading the classroom question.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Validated media type</span><strong id="media">—</strong></article>
+            <article><span>Image bytes submitted</span><strong id="bytes">—</strong></article>
+            <article><span>User-message content</span><strong id="types">—</strong></article>
+            <article>
+              <span>Original infographic content check</span><strong id="content-check">—</strong>
+            </article>
+          </section>
+          <div class="columns">
+            <section class="panel image-panel">
+              <div class="heading">
+                <span class="icon blue">▧</span>
+                <h3>Actual selected image</h3>
+              </div>
+              <img
+                id="preview"
+                src="assets/main-infographic.png"
+                alt="Selected image for the SDK analysis"
+              />
+              <p id="image-name">Original main infographic</p>
+            </section>
+            <section class="panel answer-panel">
+              <div class="heading">
+                <span class="icon mint">“ ”</span>
+                <h3>Actual visual explanation</h3>
+              </div>
+              <pre id="answer">Awaiting the real SDK image response.</pre>
+              <pre id="metadata"></pre>
+              <a id="download" class="secondary hidden" download
+                >Download observed image-input report</a
+              >
+            </section>
+          </div>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual image-message implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 34 · Image input</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original image-input infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 34 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 92 · Follow-up Questions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 92</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Follow-up<br /><em>Questions</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Compare three actual queries with explicit resume against three separate conversations.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Ask related questions and inspect retained conversation context</h2>
+          <p class="intro">
+            Establish a random classroom plan, recall its exact values and apply it in a third
+            question. Compare explicit session resume with separate fresh conversations.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⌁</span>
+              <h3>Three related questions · actual native conversations</h3>
+              <span id="status" class="badge">Ready</span>
+            </div>
+            <div class="controls">
+              <label
+                >Context case<select id="mode">
+                  <option value="resume" selected>Resume the same captured session</option>
+                  <option value="fresh">Fresh session for each question</option>
+                </select></label
+              ><label
+                >Classroom topic<select id="topic">
+                  <option value="MCP">MCP</option>
+                  <option value="Hooks">Hooks</option>
+                </select></label
+              ><button id="inspect" class="primary">▶ Ask three actual questions</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">
+              Compare captured native IDs and exact answers without repeating the marker in
+              follow-ups.
+            </p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Actual native queries</span><strong id="preapproved-value">—</strong>
+            </article>
+            <article>
+              <span>Distinct native sessions</span><strong id="hook-value">—</strong>
+            </article>
+            <article>
+              <span>Follow-ups with context</span><strong id="approval-value">—</strong>
+            </article>
+            <article><span>Exact context checks</span><strong id="read-value">—</strong></article>
+          </section>
+          <div class="outcome-panels">
+            <section class="panel">
+              <div class="heading">
+                <span class="icon orange">ƒ</span>
+                <h3>1 · Establish the plan</h3>
+              </div>
+              <pre id="request"></pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon mint">⇢</span>
+                <h3>2 · Recall earlier context</h3>
+              </div>
+              <pre id="admission"></pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon blue">{ }</span>
+                <h3>3 · Apply the earlier plan</h3>
+              </div>
+              <pre id="result"></pre>
+            </section>
+          </div>
+          <section class="panel questions-panel">
+            <div class="heading">
+              <span class="icon orange">?</span>
+              <h3>Actual prompts and explicit resume selection</h3>
+            </div>
+            <pre id="questions"></pre>
+          </section>
+          <section class="panel verification-panel checks-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Checks against actual IDs and retained values</h3>
+            </div>
+            <pre id="checks"></pre>
+            <pre id="provenance">
+The owned marker and requirements are supplied only in the first prompt. The follow-up prompts omit their values. Fresh mode is an intentional context-loss control.</pre
+            >
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Actual query prompts, native IDs and structured answers</h3>
+            </div>
+            <pre id="evidence"></pre>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed follow-up report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>Explicit resume and exact context verification</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 92 · Follow-up questions</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Follow-up questions infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 92 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

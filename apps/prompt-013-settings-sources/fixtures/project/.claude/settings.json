@@ -1,0 +1,4 @@
+{
+  "cleanupPeriodDays":14,
+  "env":{"LESSON_SETTING_ORIGIN":"project"}
+}

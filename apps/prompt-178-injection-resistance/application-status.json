@@ -1,0 +1,12 @@
+{
+  "number": 178,
+  "title": "Injection resistance",
+  "application": "course-labs/prompt-178-injection-resistance",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-23T10:58:21.658Z"
+}

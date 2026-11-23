@@ -1,0 +1,18 @@
+[
+  {
+    "uri": "course://lessons/agent-loop",
+    "name": "agent-loop",
+    "mimeType": "application/json",
+    "title": "A classroom agent loop",
+    "paragraph": "A classroom agent receives a task, selects a permitted tool, observes its actual result and decides whether another action is needed.",
+    "segments": [4, 6, 3]
+  },
+  {
+    "uri": "course://lessons/mcp-resources",
+    "name": "mcp-resources",
+    "mimeType": "application/json",
+    "title": "Context from an MCP resource",
+    "paragraph": "The classroom host discovers a named resource, reads its URI and makes that returned text available as context for the learning task.",
+    "segments": [5, 4, 7]
+  }
+]

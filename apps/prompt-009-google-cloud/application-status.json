@@ -1,0 +1,12 @@
+{
+  "number": 9,
+  "title": "Google Cloud",
+  "application": "course-labs/prompt-009-google-cloud",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_provider_configuration_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-23T10:57:33.039Z"
+}

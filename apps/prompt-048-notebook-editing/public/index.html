@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 48 · Notebook Edit Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 48</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Notebook<br /><em>Editing</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Use native NotebookEdit, verify changed cells and execute the actual pricing cell through
+          Python.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Edit an actual notebook cell and verify its behavior</h2>
+          <p class="intro">
+            Replace the pricing calculation, preserve the other cells and compare actual Python
+            results.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">▤</span>
+              <h3>Native Read and NotebookEdit</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Classroom cell<select id="mode">
+                  <option value="edit">Existing pricing-cell · replace source</option>
+                  <option value="missing">Deliberately missing-cell · observe native error</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Edit and verify notebook</button
+              ><button id="repair" class="secondary">Restore existing cell ID</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the supplied Jupyter notebook.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Original total · EUR cents</span><strong id="before-total">—</strong>
+            </article>
+            <article>
+              <span>Total after the run · EUR cents</span><strong id="after-total">—</strong>
+            </article>
+            <article><span>Actual notebook cells</span><strong id="cell-count">—</strong></article>
+            <article>
+              <span>Cell preservation checks</span><strong id="preserved">—</strong>
+            </article>
+          </section>
+          <div class="pricing-panels">
+            <section class="panel">
+              <div class="heading">
+                <span class="icon orange">{ }</span>
+                <h3>Original pricing-cell source</h3>
+              </div>
+              <pre id="before-source"></pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon mint">{ }</span>
+                <h3>Actual pricing-cell after the run</h3>
+              </div>
+              <pre id="after-source"></pre>
+            </section>
+          </div>
+          <div class="execution-panels">
+            <section class="panel">
+              <div class="heading">
+                <span class="icon orange">▷</span>
+                <h3>Actual original cell execution</h3>
+              </div>
+              <pre id="before-execution">Awaiting actual Python execution.</pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon mint">▶</span>
+                <h3>Actual cell execution after the run</h3>
+              </div>
+              <pre id="after-execution">Awaiting actual Python execution.</pre>
+            </section>
+          </div>
+          <section class="panel preservation-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Actual cell and metadata preservation checks</h3>
+            </div>
+            <pre id="checks"></pre>
+            <div id="other-cells"></div>
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⇢</span>
+              <h3>Actual native notebook edit evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+            <details>
+              <summary>Preserved native tool results and notebook edit response</summary>
+              <pre id="tool-results"></pre>
+            </details>
+            <a id="notebook-download" class="secondary hidden" download
+              >Download the actual checkout.ipynb</a
+            >
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download>Download observed notebook report</a>
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual notebook cell edit and verification implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 48 · Notebook editing</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original notebook editing infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 48 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

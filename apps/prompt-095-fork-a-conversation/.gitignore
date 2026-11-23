@@ -1,0 +1,5 @@
+node_modules/
+runs/
+.env
+last-report.json
+verification-live.json

@@ -1,0 +1,10 @@
+{
+  "reviewedOn": "2026-11-23",
+  "baselineSdk": "0.3.322",
+  "candidateSdk": "0.3.330",
+  "candidateRuntime": "2.1.330",
+  "sources": ["https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/CHANGELOG.md", "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"],
+  "sdkReview": [{"area":"settings validation", "impact":"Candidate rejects malformed JSON settings strings; test invalid input explicitly."}, {"area":"MCP reconnect", "impact":"Candidate addresses overlapping tool-result routing; verify tool identity under reconnect."}, {"area":"stopped background tasks", "impact":"Verify terminal lifecycle after stop races."}],
+  "runtimeReview": [{"area":"resume persistence", "impact":"Verify sessions after missing timestamps and crashes."}, {"area":"permission responses", "impact":"Verify approved text/image payload handling."}],
+  "decision": "Review only. Candidate not installed or certified by baseline tests."
+}

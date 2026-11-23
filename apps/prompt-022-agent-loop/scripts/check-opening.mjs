@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {execFileSync} from 'node:child_process';
+const root=path.resolve(import.meta.dirname,'..'),out=path.join(root,'recordings');
+const require=createRequire(path.resolve(root,'../../output/prompt-01-video/tools/package.json'));
+const ffmpeg=require('ffmpeg-static');
+const file=path.join(out,'prompt-022-agent-loop-pilot.mp4');
+const run=args=>execFileSync(ffmpeg,args,{encoding:'utf8',windowsHide:true});
+const audioHash=file=>run(['-v','error','-i',file,'-map','0:a:0','-c','copy','-f','hash','-hash','sha256','-']).trim();
+const before=audioHash(path.join(out,'render/previous-export.mp4')),after=audioHash(file);
+if(before!==after)throw Error('The approved audio changed');
+run(['-y','-v','error','-ss','16.7','-i',file,'-vf','trim=duration=1.6,fps=30,scale=320:180,tile=8x6:nb_frames=48:padding=2:color=0x10172d','-frames:v','1',path.join(out,'opening-transition-frames.png')]);
+await fs.writeFile(path.join(out,'opening-fix-checks.json'),JSON.stringify({checkedAt:new Date().toISOString(),fix:'Cover rotates directly into original infographic; opening slides rendered from source images',audioUnchanged:true,audioPacketSha256:after,frameReview:{startSeconds:16.7,endSeconds:18.3,fps:30,frames:48,contactSheet:'opening-transition-frames.png'}},null,2));
+console.log('Approved audio unchanged; extracted all 48 frames around the opening transition.');

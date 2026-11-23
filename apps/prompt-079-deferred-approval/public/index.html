@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 79 · Deferred Approval</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 79</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Deferred<br /><em>Approval</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Defer the actual native call, stop its worker and resume the same persisted request after
+          a decision.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Stop a real worker while its native tool call awaits approval</h2>
+          <p class="intro">
+            A synthetic owned classroom note demonstrates the supported defer hook, persisted native
+            transcript and replay through a fresh worker.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">Ⅱ</span>
+              <h3>Actual deferred native Write</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Classroom topic<select id="topic">
+                  <option value="MCP">MCP</option>
+                  <option value="Hooks">Hooks</option>
+                </select></label
+              ><button id="defer" class="primary" disabled>▶ Defer actual Write</button
+              ><label
+                >Owner decision<select id="decision">
+                  <option value="approve">Approve original call</option>
+                  <option value="deny">Deny original call</option>
+                </select></label
+              ><button id="resume" class="secondary" disabled>Resume saved native session</button>
+            </div>
+            <pre id="facts">
+Hook · PreToolUse permissionDecision defer
+Persistence · actual native session transcript on disk
+Worker · stops after tool_deferred, fresh worker on resume
+Fixture · only the owned synthetic classroom-note.txt</pre
+            >
+            <p id="progress">Loading saved classroom state.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="panel input-panel" id="restore-panel">
+            <div class="heading">
+              <span class="icon blue">↻</span>
+              <h3>Restore a saved classroom run</h3>
+            </div>
+            <div class="controls">
+              <label
+                >Actual run identifier<input
+                  id="run-id"
+                  maxlength="36"
+                  placeholder="Saved run UUID" /></label
+              ><button id="restore" class="secondary">Load saved state</button>
+            </div>
+            <pre id="restore-result"></pre>
+          </section>
+          <section class="summary">
+            <article><span>Saved run state</span><strong id="state-value">—</strong></article>
+            <article>
+              <span>Native worker stopped</span><strong id="worker-value">—</strong>
+            </article>
+            <article>
+              <span>Actual native session</span><strong id="session-value">—</strong>
+            </article>
+            <article>
+              <span>Actual output file exists</span><strong id="file-value">—</strong>
+            </article>
+          </section>
+          <div class="outcome-panels">
+            <section class="panel" id="pending-panel">
+              <div class="heading">
+                <span class="icon orange">Ⅱ</span>
+                <h3>Original deferred native call</h3>
+              </div>
+              <pre id="pending"></pre>
+            </section>
+            <section class="panel" id="workers-panel">
+              <div class="heading">
+                <span class="icon mint">⇢</span>
+                <h3>Actual worker and replay evidence</h3>
+              </div>
+              <pre id="workers"></pre>
+            </section>
+            <section class="panel" id="file-panel">
+              <div class="heading">
+                <span class="icon blue">{ }</span>
+                <h3>Actual file and native final result</h3>
+              </div>
+              <pre id="file"></pre>
+            </section>
+          </div>
+          <section class="panel verification-panel checks-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Checks against actual deferral, worker exit and replay</h3>
+            </div>
+            <pre id="checks"></pre>
+            <pre id="provenance">
+Approval is a local classroom operator decision. Worker process identifiers and session identifiers come from actual SDK execution.</pre
+            >
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Preserved native hook, call and result evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed deferred approval report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>Actual defer hook, persisted state and session resumption</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 79 · Deferred approval</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Deferred approval infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 79 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

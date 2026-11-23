@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 96 · Session Browser</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 96</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Session<br /><em>Browser</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Actual SDK utilities read two unchanged historical classroom transcripts. No model query
+          or API key is needed.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Browse actual saved sessions, metadata and conversation messages</h2>
+          <p class="intro">
+            Inspect verified historical classroom runs with native listSessions(), getSessionInfo()
+            and getSessionMessages(). The isolated transcript fixtures retain their original SHA
+            hashes.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⌁</span>
+              <h3>Read owned historical sessions · no new model calls</h3>
+              <span id="status" class="badge">Ready</span>
+            </div>
+            <div class="controls">
+              <label
+                >Selected recorded run<select id="selection">
+                  <option value="switch">Allowed model-switch classroom run</option>
+                  <option value="denied">Denied model-switch classroom run</option>
+                </select></label
+              >
+              <label
+                >SDK message page size<select id="page-size">
+                  <option value="2">2 messages</option>
+                  <option value="4">4 messages</option>
+                </select></label
+              >
+              <label class="check-label"
+                ><input id="system" type="checkbox" />Include system messages</label
+              >
+              <button id="inspect" class="primary">▶ Read actual session data</button>
+            </div>
+            <pre id="facts">
+Read-only SDK utilities · list → inspect metadata → retrieve messages
+Historical recordings from verified Prompt 89 experiments using owned synthetic classroom data.
+Only fixtures/native-config is read. The user's normal Claude configuration is not browsed.</pre
+            >
+            <p id="progress">Select a recorded run and read its native session data.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Actual saved sessions</span><strong id="sessions-value">—</strong>
+            </article>
+            <article>
+              <span>SDK conversation messages</span><strong id="total-value">—</strong>
+            </article>
+            <article><span>Current SDK page</span><strong id="page-value">—</strong></article>
+            <article><span>Transcript unchanged</span><strong id="hash-value">—</strong></article>
+          </section>
+          <div class="session-panels">
+            <section class="panel listing-panel">
+              <div class="heading">
+                <span class="icon blue">≡</span>
+                <h3>Native session listing</h3>
+              </div>
+              <div id="listing">Awaiting an actual SDK read.</div>
+            </section>
+            <section class="panel metadata-panel">
+              <div class="heading">
+                <span class="icon mint">{ }</span>
+                <h3>Native selected-session metadata</h3>
+              </div>
+              <pre id="session-metadata">Awaiting an actual SDK read.</pre>
+            </section>
+          </div>
+          <section class="panel transcript-panel">
+            <div class="heading">
+              <span class="icon orange">☰</span>
+              <h3>Actual conversation messages</h3>
+            </div>
+            <div class="transcript-controls">
+              <button id="previous" class="secondary" disabled>← Previous SDK page</button
+              ><span id="pagination">No page loaded</span
+              ><button id="next" class="secondary" disabled>Next SDK page →</button
+              ><label
+                >Display role<select id="role">
+                  <option value="all">All roles on this page</option>
+                  <option value="user">User</option>
+                  <option value="assistant">Assistant</option>
+                  <option value="system">System</option>
+                </select></label
+              >
+            </div>
+            <p id="role-count"></p>
+            <div id="messages">No transcript data has been loaded.</div>
+          </section>
+          <section class="panel verification-panel checks-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Check actual utility output against unchanged transcript files</h3>
+            </div>
+            <pre id="checks">Awaiting actual native utility checks.</pre>
+            <pre id="provenance">
+The fixture transcripts are historical recordings, not newly generated conversations. Their original working-directory metadata is retained. This viewer reads copies in its own isolated configuration directory.</pre
+            >
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Native pagination, missing-session control and SHA evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed SDK session-browser report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>Supported SDK session-reading utilities</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 96 · Session browser</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Session browser infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 96 cover with Author: Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

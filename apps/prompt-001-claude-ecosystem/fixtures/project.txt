@@ -1,0 +1,5 @@
+Project: Course Compass
+Purpose: help students choose an implementation route for Claude.
+Audience: Udemy learners
+Language: TypeScript
+Verification marker: COMPASS-001

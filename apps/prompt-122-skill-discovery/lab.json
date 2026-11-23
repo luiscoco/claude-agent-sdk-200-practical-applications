@@ -1,0 +1,28 @@
+{
+  "number": 122,
+  "title": "Skill discovery",
+  "prompt": "Compare personal and project skill discovery and inspect the skills available to the session.",
+  "port": 43222,
+  "scope": "Create owned skills or plugins, inspect actual native discovery and control responses, then invoke the relevant skill through a real model in live mode.",
+  "modes": [
+    {
+      "id": "local",
+      "label": "Local native discovery and controls",
+      "description": "Actual SDK operations with zero model turns. This does not certify the live model scenario."
+    },
+    {
+      "id": "live",
+      "label": "Live model scenario",
+      "description": "Actual model calls with bounded turns, cost and time. Requires locally configured replacement credentials and uses account credits."
+    }
+  ],
+  "sources": [
+    "src/lesson.ts",
+    "src/agents.ts",
+    "src/capabilities.ts",
+    "src/extensions.ts",
+    "src/native.ts",
+    "src/launch.ts",
+    "src/server.ts"
+  ]
+}

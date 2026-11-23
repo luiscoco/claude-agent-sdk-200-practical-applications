@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 97 · Session Organization</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 97</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Session<br /><em>Organization</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Actual SDK rename/tag operations on fresh disposable copies of owned recorded sessions.
+          Verify persisted changes in a new process.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Rename and tag actual saved sessions, then independently reload them</h2>
+          <p class="intro">
+            Use native renameSession() and tagSession() utilities. Each experiment starts with a
+            fresh copy of a historical classroom transcript, preserves conversation messages and
+            leaves the original fixture unchanged.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⌁</span>
+              <h3>Actual persisted metadata changes · no model query</h3>
+              <span id="status" class="badge">Ready</span>
+            </div>
+            <div class="controls">
+              <label
+                >Organization case<select id="mode">
+                  <option value="organize">Rename and tag</option>
+                  <option value="replace">Replace earlier title and tag</option>
+                  <option value="clear">Clear the assigned tag</option>
+                </select></label
+              ><label
+                >New native title<input
+                  id="title"
+                  value="MCP classroom review"
+                  maxlength="90" /></label
+              ><label
+                >Tag<select id="tag">
+                  <option value="ready">ready</option>
+                  <option value="review">review</option>
+                </select></label
+              ><button id="inspect" class="primary">▶ Run actual native utilities</button>
+            </div>
+            <pre id="facts">
+Native SDK utilities · renameSession → tagSession → new-process reload
+Only a fresh disposable copy in this application's runs directory is modified.
+The original historical fixture and the other copied session stay unchanged.</pre
+            >
+            <p id="progress">
+              Inspect actual metadata before and after native writes, then after process exit.
+            </p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Completed native mutations</span><strong id="calls-value">—</strong>
+            </article>
+            <article>
+              <span>Conversation messages</span><strong id="messages-value">—</strong>
+            </article>
+            <article>
+              <span>Independent reader PID</span><strong id="reload-value">—</strong>
+            </article>
+            <article><span>Original fixture SHA</span><strong id="source-value">—</strong></article>
+          </section>
+          <div class="outcome-panels">
+            <section class="panel">
+              <div class="heading">
+                <span class="icon blue">1</span>
+                <h3>Original native metadata</h3>
+              </div>
+              <pre id="before"></pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon orange">2</span>
+                <h3>After actual native writes</h3>
+              </div>
+              <pre id="after"></pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon mint">3</span>
+                <h3>New-process native read</h3>
+              </div>
+              <pre id="reloaded"></pre>
+            </section>
+          </div>
+          <section class="panel operations-panel">
+            <div class="heading">
+              <span class="icon orange">⇢</span>
+              <h3>Completed native calls and observed metadata after each call</h3>
+            </div>
+            <pre id="operations"></pre>
+          </section>
+          <section class="panel verification-panel checks-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Verify persisted organization without changing conversation content</h3>
+            </div>
+            <pre id="checks"></pre>
+            <pre id="provenance">
+The source is a historical owned classroom recording. Only a newly copied transcript is changed. Native session identity remains the same; changing a title does not create a new conversation.</pre
+            >
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Actual persisted metadata entries and process evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed session-organization report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>Supported rename/tag utilities and independent process reload</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 97 · Session organization</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Session organization infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 97 cover with Author: Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

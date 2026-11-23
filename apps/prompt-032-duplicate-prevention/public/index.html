@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 32 · Duplicate Prevention Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 32</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Duplicate<br /><em>Prevention</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Reconcile completed text with the block already displayed from its deltas.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Render one response once across both SDK message forms</h2>
+          <p class="intro">
+            Trace real API message IDs, content-block indexes, text deltas and completed blocks.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⇢</span>
+              <h3>Three-line response task</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <pre id="task"></pre>
+            <div class="controls">
+              <label
+                >Rendering strategy<select id="mode">
+                  <option value="reconciled">Reconcile the existing text block</option>
+                  <option value="naive">Deliberate bug · append deltas and completed text</option>
+                  <option value="completed-only">Display completed text only</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Run real SDK response</button
+              ><button id="repair" class="secondary">Restore reconciliation</button>
+            </div>
+            <p id="progress">Loading the classroom response task.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Actual text deltas</span><strong id="deltas">—</strong></article>
+            <article><span>Completed text blocks</span><strong id="completions">—</strong></article>
+            <article><span>Rendered characters</span><strong id="characters">—</strong></article>
+            <article><span>Extra displayed characters</span><strong id="extra">—</strong></article>
+          </section>
+          <div class="columns">
+            <section class="panel output-panel">
+              <div class="heading">
+                <span class="icon orange">“ ”</span>
+                <h3>Rendered response</h3>
+              </div>
+              <pre id="output">Awaiting a real response.</pre>
+            </section>
+            <section class="panel completed-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Completed SDK text</h3>
+              </div>
+              <pre id="completed">Awaiting completed text.</pre>
+            </section>
+          </div>
+          <section class="panel verification-panel">
+            <div class="heading">
+              <span class="icon blue">≡</span>
+              <h3>Actual block identities and verification</h3>
+            </div>
+            <pre id="verification">Awaiting actual SDK block observations.</pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed rendering report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual block reconciliation implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 32 · Duplicate prevention</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original duplicate prevention infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 32 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

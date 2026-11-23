@@ -1,0 +1,12 @@
+{
+  "number": 132,
+  "title": "Runtime switching",
+  "application": "course-labs/prompt-132-runtime-switching",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:22.256Z"
+}

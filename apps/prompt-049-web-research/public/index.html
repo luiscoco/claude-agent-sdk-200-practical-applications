@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 49 · Web Research Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 49</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Web<br /><em>Research</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Use real native WebSearch and trace each finding to its observed official-documentation
+          sources.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Research a question and cite actual returned source URLs</h2>
+          <p class="intro">
+            Run native WebSearch and validate each finding's citations against its actual source
+            hits.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⌕</span>
+              <h3>Native WebSearch research agent</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Research question<textarea
+                  id="question"
+                  rows="2"
+                  maxlength="200"
+                ></textarea></label
+              ><label
+                >Search access<select id="mode">
+                  <option value="search">Allow official-documentation search</option>
+                  <option value="blocked">Deliberately deny search access</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Research and cite sources</button
+              ><button id="repair" class="secondary">Restore search access</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the classroom research settings.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Actual returned search hits</span><strong id="hit-count">—</strong>
+            </article>
+            <article><span>Cited findings</span><strong id="finding-count">—</strong></article>
+            <article>
+              <span>Source URL membership</span><strong id="source-check">—</strong>
+            </article>
+            <article>
+              <span>Observed search access</span><strong id="access-state">—</strong>
+            </article>
+          </section>
+          <section class="panel findings-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Findings with verified source URLs</h3>
+            </div>
+            <div id="findings">Awaiting actual search results.</div>
+            <p id="research-note"></p>
+          </section>
+          <section class="panel sources-panel">
+            <div class="heading">
+              <span class="icon blue">↗</span>
+              <h3>Actual native search hits</h3>
+            </div>
+            <div id="hits"></div>
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⇢</span>
+              <h3>Actual native search and citation evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+            <pre id="validation"></pre>
+            <details>
+              <summary>Actual native structured findings</summary>
+              <pre id="raw-output"></pre>
+            </details>
+            <details>
+              <summary>Captured search-result metadata and native errors</summary>
+              <pre id="tool-results"></pre>
+            </details>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download>Download observed research report</a>
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual web search and source-validation implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 49 · Web search</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original web search infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 49 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

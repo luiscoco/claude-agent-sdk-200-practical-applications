@@ -1,0 +1,12 @@
+{
+  "number": 196,
+  "title": "Performance regression",
+  "application": "course-labs/prompt-196-performance-regression",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-23T10:58:23.515Z"
+}

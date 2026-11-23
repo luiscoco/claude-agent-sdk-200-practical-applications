@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 40 · Business Validation Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 40</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Business<br /><em>Validation</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Check factual accuracy and business rules after validating the structure of the actual
+          result.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Validate the invoice against independent business facts</h2>
+          <p class="intro">
+            The classroom source can contain incorrect amounts. Validate the actual native object
+            before checkout.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">{ }</span>
+              <h3>Invoice extraction scenario</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Classroom source<select id="mode">
+                  <option value="correct">Correct source · EUR 40.00</option>
+                  <option value="wrong-price">Incorrect source · SDK-LAB price 900 cents</option>
+                  <option value="wrong-total">Incorrect source · total 4500 cents</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Extract and validate</button>
+              <button id="repair" class="secondary">Restore authoritative amounts</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the classroom facts.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Native SDK result</span><strong id="sdk">—</strong></article>
+            <article><span>Runtime schema</span><strong id="validation">—</strong></article>
+            <article><span>Business checks</span><strong id="business-status">—</strong></article>
+            <article><span>Classroom checkout</span><strong id="consumer">—</strong></article>
+          </section>
+          <div class="data-flow">
+            <section class="panel reference-panel">
+              <div class="heading">
+                <span class="icon blue">≡</span>
+                <h3>Authoritative application facts</h3>
+              </div>
+              <pre id="reference"></pre>
+            </section>
+            <section class="panel raw-panel">
+              <div class="heading">
+                <span class="icon orange">⇢</span>
+                <h3>Actual structured output</h3>
+              </div>
+              <pre id="raw">Awaiting the actual invoice.</pre>
+            </section>
+            <section class="panel business-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Actual business validation</h3>
+              </div>
+              <pre id="business">Awaiting validated data.</pre>
+              <details>
+                <summary>All application checks</summary>
+                <pre id="checks"></pre>
+              </details>
+            </section>
+          </div>
+          <section class="panel typed-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Guarded classroom checkout</h3>
+            </div>
+            <pre id="typed">Awaiting both validation stages.</pre>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed business-validation report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual schema and business validation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 40 · Business validation</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Business validation infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 40 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

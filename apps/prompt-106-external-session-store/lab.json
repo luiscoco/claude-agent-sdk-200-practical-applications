@@ -1,0 +1,28 @@
+{
+  "number": 106,
+  "title": "External session store",
+  "prompt": "Implement a SessionStore adapter with ordered append, load, and UUID-based deduplication.",
+  "port": 43206,
+  "scope": "Write an actual persistent SessionStore adapter and verify real model recall after loading from it.",
+  "modes": [
+    {
+      "id": "local",
+      "label": "Local SDK and contract checks",
+      "description": "Actual local operations. No model inference. This does not certify the live scenario."
+    },
+    {
+      "id": "live",
+      "label": "Live model scenario",
+      "description": "Makes real model calls using your configured credentials. Checks the observed result and preserves evidence; account charges apply."
+    }
+  ],
+  "sources": [
+    "src/lesson.ts",
+    "src/native.ts",
+    "src/live.ts",
+    "src/context.ts",
+    "src/store.ts",
+    "src/launch.ts",
+    "src/server.ts"
+  ]
+}

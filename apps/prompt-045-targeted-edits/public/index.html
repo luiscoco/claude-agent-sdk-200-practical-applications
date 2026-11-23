@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 45 · Targeted Edit Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 45</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Targeted<br /><em>Edits</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Inspect the actual Edit, exact source replacement, Git diff and changed application
+          behavior.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Apply a precise edit and inspect its real diff</h2>
+          <p class="intro">
+            Change the classroom limit from 500 to 600 cents and run the edited function.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">{ }</span>
+              <h3>Native Read, Edit and behavior test</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Classroom excerpt<select id="mode">
+                  <option value="edit">Current excerpt · limit 500</option>
+                  <option value="stale">Deliberately stale excerpt · limit 450</option>
+                </select></label
+              >
+              <label
+                >Test discount in cents<input
+                  id="discount"
+                  type="number"
+                  min="0"
+                  max="1000"
+                  step="1"
+                  value="550"
+              /></label>
+              <button id="inspect" class="primary" disabled>▶ Edit and run source</button
+              ><button id="repair" class="secondary">Restore current excerpt</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the classroom facts.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Original policy limit</span><strong id="before-limit">—</strong>
+            </article>
+            <article>
+              <span>Policy limit after the run</span><strong id="after-limit">—</strong>
+            </article>
+            <article>
+              <span>Exact source replacement</span><strong id="preserved">—</strong>
+            </article>
+            <article><span>Git diff exit status</span><strong id="diff-code">—</strong></article>
+          </section>
+          <div class="behavior-panels">
+            <section class="panel before-behavior-panel">
+              <div class="heading">
+                <span class="icon orange">▷</span>
+                <h3>Actual function before the edit</h3>
+              </div>
+              <pre id="before-behavior">Awaiting source execution.</pre>
+            </section>
+            <section class="panel after-behavior-panel">
+              <div class="heading">
+                <span class="icon mint">▶</span>
+                <h3>Actual function after the run</h3>
+              </div>
+              <pre id="after-behavior">Awaiting edited source execution.</pre>
+            </section>
+          </div>
+          <section class="panel diff-panel">
+            <div class="heading">
+              <span class="icon blue">±</span>
+              <h3>Actual Git diff</h3>
+            </div>
+            <pre id="diff">Awaiting the actual source comparison.</pre>
+            <a id="diff-download" class="secondary hidden" download
+              >Download the actual pricing.patch</a
+            >
+          </section>
+          <div class="source-columns">
+            <section class="panel before-source-panel">
+              <div class="heading">
+                <span class="icon orange">⌘</span>
+                <h3>Actual source before the edit</h3>
+              </div>
+              <pre id="before-source"></pre>
+            </section>
+            <section class="panel after-source-panel">
+              <div class="heading">
+                <span class="icon mint">⌘</span>
+                <h3>Actual source after the run</h3>
+              </div>
+              <pre id="after-source"></pre>
+            </section>
+          </div>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⇢</span>
+              <h3>Actual native edit and source evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+            <details>
+              <summary>Actual native tool results</summary>
+              <pre id="tool-results"></pre>
+            </details>
+            <a id="file-download" class="secondary hidden" download
+              >Download the actual pricing.ts</a
+            >
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed targeted-edit report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual targeted edit and diff implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 45 · Targeted source edits</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Targeted source edits infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 45 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

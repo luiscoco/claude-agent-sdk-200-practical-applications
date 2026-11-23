@@ -1,0 +1,12 @@
+{
+  "number": 177,
+  "title": "Credential separation",
+  "application": "course-labs/prompt-177-credential-separation",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-23T10:58:21.563Z"
+}

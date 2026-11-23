@@ -1,0 +1,12 @@
+{
+  "number": 111,
+  "title": "Define specialists",
+  "application": "course-labs/prompt-111-define-specialists",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T19:49:26.018Z"
+}

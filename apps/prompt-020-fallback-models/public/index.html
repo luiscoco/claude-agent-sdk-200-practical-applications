@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 20 · Fallback Models Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 20</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Fallback<br /><em>Models</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Preserve the original failure reason and inspect the model that actually answered.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Observe native SDK model fallback</h2>
+          <p class="intro">
+            A deliberately unavailable primary creates a reproducible real model-selection failure.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⌘</span>
+              <h3>Fallback experiment</h3>
+              <span id="status" class="badge">Ready</span>
+            </div>
+            <div class="controls">
+              <label
+                >Configuration<select id="mode">
+                  <option value="fallback">Unavailable primary → real Sonnet backup</option>
+                  <option value="disabled">Unavailable primary · fallback disabled</option>
+                  <option value="chain">Unavailable primary → missing backup → real Sonnet</option>
+                  <option value="healthy">Healthy Sonnet primary → Haiku backup configured</option>
+                  <option value="invalid">Invalid duplicate-model example</option>
+                </select></label
+              ><button id="inspect" class="primary">▶ Run native fallback experiment</button
+              ><button id="repair" class="secondary">Restore valid fallback</button>
+            </div>
+            <p id="progress">
+              The SDK receives model and fallbackModel in one query configuration.
+            </p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article><span>Requested primary</span><strong id="primary">—</strong></article>
+            <article><span>Configured backup chain</span><strong id="backups">—</strong></article>
+            <article><span>Actual response model</span><strong id="final-model">—</strong></article>
+            <article>
+              <span>Observed fallback switches</span><strong id="switches">—</strong>
+            </article>
+          </section>
+          <div class="columns">
+            <section class="panel failure-panel">
+              <div class="heading">
+                <span class="icon orange">!</span>
+                <h3>Preserved native failure reason</h3>
+              </div>
+              <pre id="failure">
+Awaiting an observed failure reason or successful primary response.</pre
+              >
+            </section>
+            <section class="panel result-panel">
+              <div class="heading">
+                <span class="icon mint">✓</span>
+                <h3>Actual query outcome</h3>
+              </div>
+              <pre id="answer">Awaiting the actual SDK response.</pre>
+              <p id="verification">The completed report will verify the expected scenario.</p>
+              <a id="download" class="secondary hidden" download
+                >Download observed fallback report</a
+              >
+            </section>
+          </div>
+          <section class="panel events-panel">
+            <div class="heading">
+              <span class="icon blue">≡</span>
+              <h3>Native fallback events and response sequence</h3>
+            </div>
+            <div id="events" class="empty">Awaiting native runtime events.</div>
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual fallback experiment</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 20 · Fallback models</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original fallback models infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 20 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

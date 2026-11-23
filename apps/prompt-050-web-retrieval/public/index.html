@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 50 · Web Retrieval Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 50</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Web<br /><em>Retrieval</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Fetch a real public page, summarize its content and inspect embedded instruction examples
+          as source data.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Retrieve a page and keep embedded instructions in the data role</h2>
+          <p class="intro">
+            Observe actual native WebFetch output, a cited summary and this case's dummy-marker
+            checks.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">↗</span>
+              <h3>Native WebFetch classroom case</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Retrieval access<select id="mode">
+                  <option value="fetch">Fetch and summarize the OWASP page</option>
+                  <option value="blocked">Deliberately deny retrieval access</option>
+                </select></label
+              ><button id="inspect" class="primary" disabled>▶ Retrieve and summarize page</button
+              ><button id="repair" class="secondary">Restore retrieval access</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading the public classroom page settings.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Observed native HTTP status</span><strong id="http-status">—</strong>
+            </article>
+            <article><span>Observed fetched bytes</span><strong id="byte-count">—</strong></article>
+            <article>
+              <span>Excerpt in native result</span><strong id="excerpt-check">—</strong>
+            </article>
+            <article>
+              <span>Exact marker in observed channels</span><strong id="marker-status">—</strong>
+            </article>
+          </section>
+          <section class="panel summary-panel">
+            <div class="heading">
+              <span class="icon mint">▤</span>
+              <h3 id="page-title">Actual page summary</h3>
+            </div>
+            <p id="page-summary">Awaiting actual retrieval.</p>
+            <a id="source-link" target="_blank" rel="noopener noreferrer"></a>
+            <div class="excerpt-box">
+              <strong>Embedded page example · source data</strong>
+              <blockquote id="page-excerpt">
+                Awaiting an observed instruction-like excerpt.
+              </blockquote>
+            </div>
+            <p id="retrieval-note"></p>
+          </section>
+          <section class="panel native-panel">
+            <div class="heading">
+              <span class="icon blue">⇢</span>
+              <h3>Actual native WebFetch processed result</h3>
+            </div>
+            <pre id="native-result"></pre>
+          </section>
+          <section class="panel boundary-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Recorded case observations</h3>
+            </div>
+            <pre id="observations"></pre>
+            <p class="marker-label">Issued dummy classroom marker</p>
+            <code id="dummy-marker"></code>
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Actual native retrieval evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+            <details>
+              <summary>Preserved native response metadata and errors</summary>
+              <pre id="tool-results"></pre>
+            </details>
+            <details>
+              <summary>Actual native structured summary</summary>
+              <pre id="raw-output"></pre>
+            </details>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed retrieval report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>The actual retrieval and source-data observation implementation</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 50 · Web retrieval</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original web retrieval infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 50 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

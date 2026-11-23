@@ -1,0 +1,12 @@
+{
+  "number": 8,
+  "title": "Claude Platform on AWS",
+  "application": "course-labs/prompt-008-claude-platform-on-aws",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_provider_configuration_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-23T10:57:32.942Z"
+}

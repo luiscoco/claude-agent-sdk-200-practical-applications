@@ -1,0 +1,12 @@
+{
+  "number": 136,
+  "title": "Custom process transport",
+  "application": "course-labs/prompt-136-custom-process-transport",
+  "typecheck": "passed",
+  "localNativeChecks": "passed",
+  "browserChecks": "passed",
+  "live": "not_run_replacement_credentials_required",
+  "liveVerified": false,
+  "video": "not_created_in_this_batch",
+  "checkedAt": "2026-11-22T21:39:22.503Z"
+}

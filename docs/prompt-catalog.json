@@ -1,0 +1,1405 @@
+{
+  "total": 200,
+  "lessons": [
+    {
+      "number": 1,
+      "title": "Understand the SDK",
+      "prompt": "Compare Claude Agent SDK, Claude Code CLI, Anthropic client SDKs, and Managed Agents; explain when to choose each.",
+      "path": "apps/prompt-001-claude-ecosystem",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 2,
+      "title": "Check versions",
+      "prompt": "Inspect my SDK and bundled runtime versions; create a capability checklist using the matching official documentation.",
+      "path": "apps/prompt-002-check-versions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 3,
+      "title": "TypeScript setup",
+      "prompt": "Create a minimal TypeScript project using @anthropic-ai/claude-agent-sdk, with installation and execution commands.",
+      "path": "apps/prompt-003-typescript-setup",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 4,
+      "title": "Python setup",
+      "prompt": "Create a minimal Python project using claude-agent-sdk, with an isolated environment and a runnable entry point.",
+      "path": "apps/prompt-004-python-setup",
+      "runtime": "Python"
+    },
+    {
+      "number": 5,
+      "title": "Runtime requirements",
+      "prompt": "Verify operating-system support, language requirements, and Claude Code binary availability; diagnose any missing runtime dependency.",
+      "path": "apps/prompt-005-runtime-requirements",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 6,
+      "title": "Anthropic authentication",
+      "prompt": "Configure API-key authentication through environment variables; show explicit .env loading and a clear missing-credentials error.",
+      "path": "apps/prompt-006-anthropic-authentication",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 7,
+      "title": "Amazon Bedrock",
+      "prompt": "Configure this agent to use Amazon Bedrock; verify credentials, region, model access, and provider-specific limitations.",
+      "path": "apps/prompt-007-amazon-bedrock",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 8,
+      "title": "Claude Platform on AWS",
+      "prompt": "Configure Claude Platform on AWS authentication; explain how this deployment route differs from Amazon Bedrock.",
+      "path": "apps/prompt-008-claude-platform-on-aws",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 9,
+      "title": "Google Cloud",
+      "prompt": "Configure the documented Google Cloud provider using the Vertex-related SDK settings; verify credentials, model identifiers, and feature availability.",
+      "path": "apps/prompt-009-google-cloud",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 10,
+      "title": "Microsoft Foundry",
+      "prompt": "Configure Microsoft Foundry authentication and model selection; document any SDK capabilities unavailable on this provider.",
+      "path": "apps/prompt-010-microsoft-foundry",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 11,
+      "title": "Working directory",
+      "prompt": "Run an agent against a specific project directory and demonstrate how cwd affects file access and project discovery.",
+      "path": "apps/prompt-011-working-directory",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 12,
+      "title": "Additional directories",
+      "prompt": "Grant access to one additional directory; verify the resulting file permissions and configuration-discovery behavior.",
+      "path": "apps/prompt-012-additional-directories",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 13,
+      "title": "Settings sources",
+      "prompt": "Demonstrate user, project, and local settings; show their defaults, precedence, and how to disable optional filesystem sources.",
+      "path": "apps/prompt-013-settings-sources",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 14,
+      "title": "Environment variables",
+      "prompt": "Configure subprocess environment variables safely; explain the TypeScript replacement behavior and Python merge behavior.",
+      "path": "apps/prompt-014-environment-variables",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 15,
+      "title": "System-prompt choices",
+      "prompt": "Compare the minimal default prompt, the claude_code preset, and a fully custom system prompt.",
+      "path": "apps/prompt-015-system-prompt-choices",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 16,
+      "title": "Extend the preset",
+      "prompt": "Append domain-specific instructions to the Claude Code preset and demonstrate the resulting behavior on a small task.",
+      "path": "apps/prompt-016-extend-preset",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 17,
+      "title": "Project instructions",
+      "prompt": "Add project conventions through CLAUDE.md and project rules; verify which instruction files the session loads.",
+      "path": "apps/prompt-017-project-instructions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 18,
+      "title": "Output styles",
+      "prompt": "Create and activate an output style that makes the agent explain changes clearly and report verification results.",
+      "path": "apps/prompt-018-output-styles",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 19,
+      "title": "Model selection",
+      "prompt": "Select an available model explicitly; explain aliases, exact identifiers, provider differences, and reproducibility considerations.",
+      "path": "apps/prompt-019-model-selection",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 20,
+      "title": "Fallback models",
+      "prompt": "Configure supported fallback models and demonstrate how the application reports a fallback without hiding the original failure.",
+      "path": "apps/prompt-020-fallback-models",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 21,
+      "title": "First query",
+      "prompt": "Build the smallest agent query that returns an answer; explicitly disable unnecessary built-in and MCP tools.",
+      "path": "apps/prompt-021-first-query",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 22,
+      "title": "Agent loop",
+      "prompt": "Create an agent that reads a file, performs a calculation, and reports the result; explain the automatic execution loop.",
+      "path": "apps/prompt-022-agent-loop",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 23,
+      "title": "Message types",
+      "prompt": "Handle system, assistant, user, tool-result, and final-result messages using the SDK’s documented types.",
+      "path": "apps/prompt-023-message-types",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 24,
+      "title": "Completion handling",
+      "prompt": "Distinguish successful completion, error results, and thrown exceptions; return a consistent application response for each.",
+      "path": "apps/prompt-024-completion-handling",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 25,
+      "title": "Input modes",
+      "prompt": "Implement the same task using a string prompt and streaming input; explain when each mode is appropriate.",
+      "path": "apps/prompt-025-input-modes",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 26,
+      "title": "TypeScript conversation",
+      "prompt": "Build a multi-turn TypeScript conversation using query() and an asynchronous stream of user messages.",
+      "path": "apps/prompt-026-typescript-conversation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 27,
+      "title": "Python conversation",
+      "prompt": "Build a multi-turn Python conversation using ClaudeSDKClient and its documented response-receiving methods.",
+      "path": "apps/prompt-027-python-conversation",
+      "runtime": "Python"
+    },
+    {
+      "number": 28,
+      "title": "Queued messages",
+      "prompt": "Queue multiple user messages and verify execution order, turn boundaries, and how responses map to their originating messages.",
+      "path": "apps/prompt-028-queued-messages",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 29,
+      "title": "Interruptions",
+      "prompt": "Interrupt an active turn, handle remaining events, and continue the conversation with a new instruction.",
+      "path": "apps/prompt-029-interruptions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 30,
+      "title": "Resource cleanup",
+      "prompt": "Implement reliable session cleanup after success, cancellation, and exceptions; verify the subprocess does not remain running.",
+      "path": "apps/prompt-030-resource-cleanup",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 31,
+      "title": "Incremental text",
+      "prompt": "Enable partial-message output and print text as it arrives instead of waiting for completed content blocks.",
+      "path": "apps/prompt-031-incremental-text",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 32,
+      "title": "Duplicate prevention",
+      "prompt": "Render streaming deltas and completed messages without displaying the same response twice.",
+      "path": "apps/prompt-032-duplicate-prevention",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 33,
+      "title": "Tool-call streaming",
+      "prompt": "Display tool-call progress and incrementally received arguments without treating incomplete JSON as executable input.",
+      "path": "apps/prompt-033-tool-call-streaming",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 34,
+      "title": "Image input",
+      "prompt": "Send an image with a user message and build an agent that explains its relevant visual content.",
+      "path": "apps/prompt-034-image-input",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 35,
+      "title": "JSON Schema",
+      "prompt": "Return a structured result using the SDK’s output-format configuration and a small JSON Schema.",
+      "path": "apps/prompt-035-json-schema",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 36,
+      "title": "Zod integration",
+      "prompt": "Define a TypeScript result schema with Zod and validate the agent’s structured output before using it.",
+      "path": "apps/prompt-036-zod-integration",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 37,
+      "title": "Pydantic integration",
+      "prompt": "Define a Python result model with Pydantic and validate the agent’s structured output before using it.",
+      "path": "apps/prompt-037-pydantic-integration",
+      "runtime": "Python"
+    },
+    {
+      "number": 38,
+      "title": "Complex results",
+      "prompt": "Return nested objects, arrays, optional fields, and enumerations; demonstrate how missing or invalid values are handled.",
+      "path": "apps/prompt-038-complex-results",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 39,
+      "title": "Structured-output failures",
+      "prompt": "Handle exhausted structured-output retries and unsuccessful results without assuming that structured data is always present.",
+      "path": "apps/prompt-039-structured-output-failures",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 40,
+      "title": "Business validation",
+      "prompt": "Add application checks for factual accuracy and business rules after schema validation; demonstrate a structurally valid but incorrect result.",
+      "path": "apps/prompt-040-business-validation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 41,
+      "title": "Tool inventory",
+      "prompt": "Inspect the session’s available tools and build a capability report before selecting tools for an example.",
+      "path": "apps/prompt-041-tool-inventory",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 42,
+      "title": "Read files",
+      "prompt": "Use the built-in file-reading capability to summarize a source file and identify the relevant sections.",
+      "path": "apps/prompt-042-read-files",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 43,
+      "title": "Find and search",
+      "prompt": "Demonstrate available Glob/Grep tools or documented shell equivalents to locate files and search their contents.",
+      "path": "apps/prompt-043-find-and-search",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 44,
+      "title": "Write files",
+      "prompt": "Create a new report file with the built-in writing tool and verify its contents afterward.",
+      "path": "apps/prompt-044-write-files",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 45,
+      "title": "Targeted edits",
+      "prompt": "Apply a precise source-file edit and show the resulting diff without rewriting unrelated content.",
+      "path": "apps/prompt-045-targeted-edits",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 46,
+      "title": "Shell commands",
+      "prompt": "Run an approved development command and capture its output, errors, exit status, and timeout behavior.",
+      "path": "apps/prompt-046-development-commands",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 47,
+      "title": "Background commands",
+      "prompt": "Start a long-running command in the background, observe completion, and implement cancellation.",
+      "path": "apps/prompt-047-background-commands",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 48,
+      "title": "Notebook editing",
+      "prompt": "Modify a small Jupyter notebook through the supported notebook tool and verify the changed cells.",
+      "path": "apps/prompt-048-notebook-editing",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 49,
+      "title": "Web search",
+      "prompt": "Build a web-research agent that uses the available search tool and includes source URLs in its findings.",
+      "path": "apps/prompt-049-web-research",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 50,
+      "title": "Web retrieval",
+      "prompt": "Fetch and summarize a webpage while treating instructions embedded in the page as untrusted content.",
+      "path": "apps/prompt-050-web-retrieval",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 51,
+      "title": "TypeScript tool",
+      "prompt": "Create a typed calculator tool with tool() and demonstrate the agent calling it.",
+      "path": "apps/prompt-051-typescript-tool",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 52,
+      "title": "Python tool",
+      "prompt": "Create a calculator tool with Python’s @tool decorator and demonstrate the agent calling it.",
+      "path": "apps/prompt-052-python-tool",
+      "runtime": "Python"
+    },
+    {
+      "number": 53,
+      "title": "Tool registration",
+      "prompt": "Register custom tools through the SDK’s in-process MCP server and verify their fully qualified names.",
+      "path": "apps/prompt-053-tool-registration",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 54,
+      "title": "Input schemas",
+      "prompt": "Define nested inputs, optional fields, and defaults; reject invalid arguments inside the tool handler.",
+      "path": "apps/prompt-054-input-schemas",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 55,
+      "title": "Tool descriptions",
+      "prompt": "Create two similar tools and improve their descriptions until the agent reliably chooses the appropriate one.",
+      "path": "apps/prompt-055-tool-descriptions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 56,
+      "title": "Rich tool results",
+      "prompt": "Return text, an image or resource, and structured data using supported custom-tool result formats.",
+      "path": "apps/prompt-056-rich-results",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 57,
+      "title": "Handled errors",
+      "prompt": "Return a useful tool error without exposing credentials, internal stack traces, or unnecessary implementation details.",
+      "path": "apps/prompt-057-handled-errors",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 58,
+      "title": "Tool annotations",
+      "prompt": "Add accurate read-only, destructive, and idempotency annotations; explain which behaviors still require enforcement.",
+      "path": "apps/prompt-058-tool-annotations",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 59,
+      "title": "Handler authorization",
+      "prompt": "Enforce user authorization inside a custom tool and demonstrate that unauthorized requests are rejected.",
+      "path": "apps/prompt-059-handler-authorization",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 60,
+      "title": "Reliable handlers",
+      "prompt": "Add timeouts, cancellation, and idempotency to a custom API tool; identify the application code responsible.",
+      "path": "apps/prompt-060-reliable-handlers",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 61,
+      "title": "Local MCP server",
+      "prompt": "Connect a local MCP server through stdio and demonstrate one successful tool invocation.",
+      "path": "apps/prompt-061-local-mcp",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 62,
+      "title": "Remote MCP server",
+      "prompt": "Connect a remote MCP server using its supported HTTP or SSE transport and verify connectivity.",
+      "path": "apps/prompt-062-remote-mcp",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 63,
+      "title": "MCP configuration",
+      "prompt": "Load MCP configuration from a file, then demonstrate strict configuration that excludes unintended servers.",
+      "path": "apps/prompt-063-mcp-configuration",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 64,
+      "title": "MCP authentication",
+      "prompt": "Implement the required application authentication flow and pass credentials securely to local or remote MCP servers.",
+      "path": "apps/prompt-064-mcp-authentication",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 65,
+      "title": "Connection states",
+      "prompt": "Handle pending, connected, authentication-required, and failed MCP states; distinguish connection timeouts from tool-call timeouts.",
+      "path": "apps/prompt-065-mcp-connection-states",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 66,
+      "title": "MCP resources",
+      "prompt": "Discover and read an MCP resource, explaining how resources differ from callable tools.",
+      "path": "apps/prompt-066-mcp-resources",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 67,
+      "title": "MCP permissions",
+      "prompt": "Configure permissions using fully qualified MCP tool names and verify server-wide versus individual-tool rules.",
+      "path": "apps/prompt-067-mcp-permissions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 68,
+      "title": "Tool search",
+      "prompt": "Demonstrate deferred tool discovery, search thresholds, and always-loaded tools; measure the resulting context and latency differences.",
+      "path": "apps/prompt-068-tool-search",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 69,
+      "title": "MCP elicitation",
+      "prompt": "Handle supported MCP elicitation requests and distinguish them from agent clarification questions and tool approvals.",
+      "path": "apps/prompt-069-mcp-elicitation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 70,
+      "title": "MCP recovery",
+      "prompt": "Recover from disconnected servers, unavailable tools, and oversized tool results; report actionable diagnostics.",
+      "path": "apps/prompt-070-mcp-recovery",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 71,
+      "title": "Availability versus approval",
+      "prompt": "Demonstrate the differences between selecting tools, preapproving tools, and denying tools.",
+      "path": "apps/prompt-071-availability-approval",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 72,
+      "title": "Permission precedence",
+      "prompt": "Create conflicting allow, deny, and ask rules; verify the documented evaluation order.",
+      "path": "apps/prompt-072-permission-precedence",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 73,
+      "title": "Interactive versus unattended",
+      "prompt": "Compare default permission handling with dontAsk using the same potentially sensitive operation.",
+      "path": "apps/prompt-073-interactive-unattended",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 74,
+      "title": "Planning and editing",
+      "prompt": "Compare plan mode and automatic edit approval; verify which actions each configuration permits.",
+      "path": "apps/prompt-074-planning-editing",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 75,
+      "title": "Advanced permission modes",
+      "prompt": "Explain available auto and bypass modes; demonstrate their behavior only in an isolated disposable workspace.",
+      "path": "apps/prompt-075-advanced-permissions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 76,
+      "title": "Approval callback",
+      "prompt": "Implement canUseTool or can_use_tool to approve, reject, or revise a pending tool request.",
+      "path": "apps/prompt-076-approval-callback",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 77,
+      "title": "Clarifying questions",
+      "prompt": "Handle AskUserQuestion, including selections and free-text answers, and return the user’s response correctly.",
+      "path": "apps/prompt-077-clarifying-questions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 78,
+      "title": "Approval interface",
+      "prompt": "Build an approval interface that associates requests with the correct user and session and handles disconnection.",
+      "path": "apps/prompt-078-approval-interface",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 79,
+      "title": "Deferred approval",
+      "prompt": "Defer a sensitive tool call using the supported hook decision, stop the worker, and resume after approval.",
+      "path": "apps/prompt-079-deferred-approval",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 80,
+      "title": "MCP-specific policy",
+      "prompt": "Apply supported per-tool or per-server MCP permission policies and verify how they interact with session permissions.",
+      "path": "apps/prompt-080-mcp-policy",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 81,
+      "title": "Hook inventory",
+      "prompt": "List every hook supported by my installed SDK and map each event to one practical use case.",
+      "path": "apps/prompt-081-hook-inventory",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 82,
+      "title": "Pre-tool enforcement",
+      "prompt": "Use PreToolUse to enforce a path restriction, including calls that have already been preapproved.",
+      "path": "apps/prompt-082-pre-tool-enforcement",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 83,
+      "title": "Input modification",
+      "prompt": "Rewrite selected tool arguments in a pre-tool hook and verify that the modified arguments reach execution.",
+      "path": "apps/prompt-083-input-modification",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 84,
+      "title": "Output modification",
+      "prompt": "Use a post-tool hook to sanitize or replace tool output before the agent receives it.",
+      "path": "apps/prompt-084-output-modification",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 85,
+      "title": "Tool failures",
+      "prompt": "Observe tool failures through the supported failure hook and record a useful diagnostic.",
+      "path": "apps/prompt-085-tool-failures",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 86,
+      "title": "Prompt and stop hooks",
+      "prompt": "Validate submitted prompts and completion conditions using supported hooks; prevent recursive stop-hook loops.",
+      "path": "apps/prompt-086-prompt-stop-hooks",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 87,
+      "title": "Subagent hooks",
+      "prompt": "Track subagent startup and completion through hooks and correlate each event with the parent task.",
+      "path": "apps/prompt-087-subagent-hooks",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 88,
+      "title": "Session lifecycle",
+      "prompt": "Implement supported session, notification, and configuration hooks; identify language-specific gaps.",
+      "path": "apps/prompt-088-session-lifecycle",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 89,
+      "title": "Context lifecycle",
+      "prompt": "Observe compaction and model-switch lifecycle events where supported and record their effects.",
+      "path": "apps/prompt-089-context-lifecycle",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 90,
+      "title": "Hook reliability",
+      "prompt": "Configure matchers, timeouts, and fail-closed behavior; demonstrate why asynchronous hooks cannot enforce blocking decisions.",
+      "path": "apps/prompt-090-hook-reliability",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 91,
+      "title": "Capture session IDs",
+      "prompt": "Capture a session identifier and associate it with an application conversation record.",
+      "path": "apps/prompt-091-capture-session-ids",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 92,
+      "title": "Follow-up questions",
+      "prompt": "Ask several related questions in one conversation and verify that earlier context remains available.",
+      "path": "apps/prompt-092-follow-up-questions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 93,
+      "title": "Resume after restart",
+      "prompt": "Restart the application and resume a specific stored session using its identifier.",
+      "path": "apps/prompt-093-resume-after-restart",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 94,
+      "title": "Continue latest session",
+      "prompt": "Demonstrate continuing the latest session and explain why explicit session selection matters for concurrent users.",
+      "path": "apps/prompt-094-continue-latest-session",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 95,
+      "title": "Fork a conversation",
+      "prompt": "Fork a session and explore two different approaches without appending both branches to the same conversation.",
+      "path": "apps/prompt-095-fork-a-conversation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 96,
+      "title": "Session browser",
+      "prompt": "List sessions and retrieve their metadata and messages to build a simple transcript viewer.",
+      "path": "apps/prompt-096-session-browser",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 97,
+      "title": "Session organization",
+      "prompt": "Rename and tag sessions using the supported utilities and verify that the changes persist.",
+      "path": "apps/prompt-097-session-organization",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 98,
+      "title": "Resume boundaries",
+      "prompt": "Resume from a supported message boundary and demonstrate exactly which earlier conversation context is retained.",
+      "path": "apps/prompt-098-resume-boundaries",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 99,
+      "title": "Persistence controls",
+      "prompt": "Demonstrate available transcript-persistence controls and identify differences between Python and TypeScript.",
+      "path": "apps/prompt-099-persistence-controls",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 100,
+      "title": "Retention and deletion",
+      "prompt": "Implement session retention and deletion using supported utilities and storage policies; verify which artifacts remain.",
+      "path": "apps/prompt-100-retention-and-deletion",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 101,
+      "title": "Context usage",
+      "prompt": "Inspect supported context-usage information and identify the largest contributors to the context window.",
+      "path": "apps/prompt-101-context-usage",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 102,
+      "title": "Automatic compaction",
+      "prompt": "Create a long conversation and observe automatic compaction and the resulting context changes.",
+      "path": "apps/prompt-102-automatic-compaction",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 103,
+      "title": "Compact versus clear",
+      "prompt": "Compare supported compact and clear commands with starting a new session.",
+      "path": "apps/prompt-103-compact-versus-clear",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 104,
+      "title": "Memory distinctions",
+      "prompt": "Demonstrate the differences between project instructions, automatic memory, and session conversation history.",
+      "path": "apps/prompt-104-memory-distinctions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 105,
+      "title": "Automatic memory controls",
+      "prompt": "Enable and disable automatic memory explicitly; verify its location, persistence, and required file tools.",
+      "path": "apps/prompt-105-automatic-memory-controls",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 106,
+      "title": "External session store",
+      "prompt": "Implement a SessionStore adapter with ordered append, load, and UUID-based deduplication.",
+      "path": "apps/prompt-106-external-session-store",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 107,
+      "title": "Cross-host resumption",
+      "prompt": "Resume a stored session on another worker and provision its workspace files separately.",
+      "path": "apps/prompt-107-cross-host-resumption",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 108,
+      "title": "Storage failures",
+      "prompt": "Simulate session-mirror failures and handle persistence-error events without incorrectly reporting durable success.",
+      "path": "apps/prompt-108-storage-failures",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 109,
+      "title": "Adapter conformance",
+      "prompt": "Run the official session-store conformance checks and verify incompatible configuration combinations.",
+      "path": "apps/prompt-109-adapter-conformance",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 110,
+      "title": "Context reduction",
+      "prompt": "Reduce context consumption through focused retrieval, smaller tool catalogs, and delegated work; compare the measurements.",
+      "path": "apps/prompt-110-context-reduction",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 111,
+      "title": "Define specialists",
+      "prompt": "Create research and review subagents with distinct responsibilities.",
+      "path": "apps/prompt-111-define-specialists",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 112,
+      "title": "Filesystem agents",
+      "prompt": "Load a subagent from a project agent-definition file and verify discovery.",
+      "path": "apps/prompt-112-filesystem-agents",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 113,
+      "title": "Delegation selection",
+      "prompt": "Demonstrate automatic delegation and explicit invocation of a named specialist.",
+      "path": "apps/prompt-113-delegation-selection",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 114,
+      "title": "Agent configuration",
+      "prompt": "Configure specialist models, tools, skills, memory, MCP access, and permissions; verify supported inheritance behavior.",
+      "path": "apps/prompt-114-agent-configuration",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 115,
+      "title": "Execution modes",
+      "prompt": "Compare foreground and background subagent execution and handle completion events.",
+      "path": "apps/prompt-115-execution-modes",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 116,
+      "title": "Parallel work",
+      "prompt": "Delegate independent analyses concurrently and combine their results into one answer.",
+      "path": "apps/prompt-116-parallel-work",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 117,
+      "title": "Agent teams",
+      "prompt": "Check SDK support for agent teams; if available, demonstrate teammate messaging and shared-task coordination.",
+      "path": "apps/prompt-117-agent-teams",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 118,
+      "title": "Resume a subagent",
+      "prompt": "Resume a particular subagent’s work using the supported identifier and lifecycle.",
+      "path": "apps/prompt-118-resume-a-subagent",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 119,
+      "title": "Forked subagents",
+      "prompt": "Compare fresh subagent context with a fork that inherits the parent conversation.",
+      "path": "apps/prompt-119-forked-subagents",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 120,
+      "title": "Nested-agent limits",
+      "prompt": "Demonstrate nested delegation with explicit depth, concurrency, and aggregate spending limits.",
+      "path": "apps/prompt-120-nested-agent-limits",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 121,
+      "title": "Create a skill",
+      "prompt": "Author a project skill with SKILL.md, useful metadata, clear instructions, and a small supporting resource.",
+      "path": "apps/prompt-121-create-a-skill",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 122,
+      "title": "Skill discovery",
+      "prompt": "Compare personal and project skill discovery and inspect the skills available to the session.",
+      "path": "apps/prompt-122-skill-discovery",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 123,
+      "title": "Skill selection",
+      "prompt": "Demonstrate named skill selection, all skills, and disabled model invocation; verify the limits of this configuration.",
+      "path": "apps/prompt-123-skill-selection",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 124,
+      "title": "Skill commands",
+      "prompt": "Invoke a skill directly with arguments and demonstrate supported frontmatter controls.",
+      "path": "apps/prompt-124-skill-commands",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 125,
+      "title": "Legacy commands",
+      "prompt": "Migrate a legacy project command to a skill while preserving its behavior.",
+      "path": "apps/prompt-125-legacy-commands",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 126,
+      "title": "Supporting resources",
+      "prompt": "Build a skill that uses a bundled script or reference file and verify its dependencies and permissions.",
+      "path": "apps/prompt-126-supporting-resources",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 127,
+      "title": "Create a plugin",
+      "prompt": "Package a skill, specialist agent, hook, and MCP configuration into a reusable local plugin.",
+      "path": "apps/prompt-127-create-a-plugin",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 128,
+      "title": "Load plugins",
+      "prompt": "Load multiple local plugins and invoke a namespaced plugin skill.",
+      "path": "apps/prompt-128-load-plugins",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 129,
+      "title": "Reload extensions",
+      "prompt": "Reload changed plugins or skills using the supported mechanism for my SDK language.",
+      "path": "apps/prompt-129-reload-extensions",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 130,
+      "title": "Extension diagnostics",
+      "prompt": "Diagnose missing skills, duplicate names, invalid metadata, and plugin-loading failures.",
+      "path": "apps/prompt-130-extension-diagnostics",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 131,
+      "title": "Capability negotiation",
+      "prompt": "Inspect initialization capabilities and enable advanced behavior only when the runtime advertises support.",
+      "path": "apps/prompt-131-capability-negotiation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 132,
+      "title": "Runtime switching",
+      "prompt": "Change the model and permission mode during a conversation and verify the next turn uses them.",
+      "path": "apps/prompt-132-runtime-switching",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 133,
+      "title": "Live settings",
+      "prompt": "Apply supported runtime settings and distinguish immediate changes from settings persisted for future sessions.",
+      "path": "apps/prompt-133-live-settings",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 134,
+      "title": "Early startup",
+      "prompt": "Compare normal TypeScript startup, startup(), and alpha prewarm(); measure initialization latency.",
+      "path": "apps/prompt-134-early-startup",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 135,
+      "title": "Reload runtime content",
+      "prompt": "Use supported TypeScript methods to reload skills or output styles during a session.",
+      "path": "apps/prompt-135-reload-runtime-content",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 136,
+      "title": "Custom process transport",
+      "prompt": "Prototype custom process spawning in TypeScript or Python’s low-level transport; isolate version-sensitive code.",
+      "path": "apps/prompt-136-custom-process-transport",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 137,
+      "title": "Host-managed reads",
+      "prompt": "Coordinate host-side file reads with agent editing using supported read-state APIs and modification timestamps.",
+      "path": "apps/prompt-137-host-managed-reads",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 138,
+      "title": "Dynamic MCP management",
+      "prompt": "Add, replace, reconnect, or disable MCP servers during a session; verify each method’s scope.",
+      "path": "apps/prompt-138-dynamic-mcp-management",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 139,
+      "title": "Tool routing",
+      "prompt": "Use supported TypeScript tool aliases to route a built-in capability to a controlled MCP implementation.",
+      "path": "apps/prompt-139-tool-routing",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 140,
+      "title": "MCP background tasks",
+      "prompt": "Implement background MCP tasks where supported; verify required flags, streaming input, events, and provider exclusions.",
+      "path": "apps/prompt-140-mcp-background-tasks",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 141,
+      "title": "Task progress",
+      "prompt": "Enable available task-tracking tools and render actual task creation, status changes, and completion.",
+      "path": "apps/prompt-141-task-progress",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 142,
+      "title": "Background lifecycle",
+      "prompt": "Track and cancel background work through supported task controls and completion notifications.",
+      "path": "apps/prompt-142-background-lifecycle",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 143,
+      "title": "Dynamic workflow",
+      "prompt": "Where supported, implement a Workflow script using parallel work, sequential stages, and consolidated results.",
+      "path": "apps/prompt-143-dynamic-workflow",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 144,
+      "title": "Workflow resumption",
+      "prompt": "Resume a supported workflow run and inspect which completed steps are reused or executed again.",
+      "path": "apps/prompt-144-workflow-resumption",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 145,
+      "title": "Optional runtime tools",
+      "prompt": "Inspect scheduling, monitoring, REPL, artifact, and cross-session capabilities; document their authentication and lifetime restrictions.",
+      "path": "apps/prompt-145-optional-runtime-tools",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 146,
+      "title": "Worktree isolation",
+      "prompt": "Use supported worktree capabilities to isolate code changes and demonstrate cleanup.",
+      "path": "apps/prompt-146-worktree-isolation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 147,
+      "title": "Enable checkpoints",
+      "prompt": "Enable file checkpointing and capture the user-message identifiers needed for restoration.",
+      "path": "apps/prompt-147-enable-checkpoints",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 148,
+      "title": "Rewind edits",
+      "prompt": "Make a controlled file edit, preview restoration where supported, and rewind to a checkpoint.",
+      "path": "apps/prompt-148-rewind-edits",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 149,
+      "title": "Resume and restore",
+      "prompt": "Resume a session and restore tracked files while explaining what remains in conversation history.",
+      "path": "apps/prompt-149-resume-and-restore",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 150,
+      "title": "Rollback boundaries",
+      "prompt": "Demonstrate checkpoint limits for shell changes, subagent edits, external side effects, and external session-store configurations.",
+      "path": "apps/prompt-150-rollback-boundaries",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 151,
+      "title": "Usage report",
+      "prompt": "Report input tokens, output tokens, cache usage, and estimated cost after a run.",
+      "path": "apps/prompt-151-usage-report",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 152,
+      "title": "Avoid double counting",
+      "prompt": "Deduplicate repeated API-message identifiers when aggregating usage from streamed messages.",
+      "path": "apps/prompt-152-avoid-double-counting",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 153,
+      "title": "Session accounting",
+      "prompt": "Calculate incremental spending correctly across multiple turns and resumed sessions.",
+      "path": "apps/prompt-153-session-accounting",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 154,
+      "title": "Turn limits",
+      "prompt": "Configure a turn limit and handle the limit-result subtype and any subsequent exception.",
+      "path": "apps/prompt-154-turn-limits",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 155,
+      "title": "Spending limits",
+      "prompt": "Configure an estimated spending threshold and demonstrate termination behavior, including subagent activity.",
+      "path": "apps/prompt-155-spending-limits",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 156,
+      "title": "Per-model reporting",
+      "prompt": "Report usage by model and explain the distinction between main-agent and whole-agent-tree accounting.",
+      "path": "apps/prompt-156-per-model-reporting",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 157,
+      "title": "Prompt caching",
+      "prompt": "Measure cache creation and reuse; compare supported cache lifetimes for the same repeated workload.",
+      "path": "apps/prompt-157-prompt-caching",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 158,
+      "title": "Thinking and effort",
+      "prompt": "Configure supported thinking and effort settings; measure quality, latency, and cost changes.",
+      "path": "apps/prompt-158-thinking-and-effort",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 159,
+      "title": "Model comparison",
+      "prompt": "Benchmark two available models on the same tasks using success rate, elapsed time, and estimated cost.",
+      "path": "apps/prompt-159-model-comparison",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 160,
+      "title": "Context efficiency",
+      "prompt": "Improve prompt-prefix stability and tool-loading efficiency, then measure whether the changes reduce cost or latency.",
+      "path": "apps/prompt-160-context-efficiency",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 161,
+      "title": "Structured logging",
+      "prompt": "Log agent events in a structured format while removing secrets and unnecessary sensitive content.",
+      "path": "apps/prompt-161-structured-logging",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 162,
+      "title": "Correlation identifiers",
+      "prompt": "Correlate application requests, sessions, tool calls, and subagent activity in the logs.",
+      "path": "apps/prompt-162-correlation-identifiers",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 163,
+      "title": "OpenTelemetry metrics",
+      "prompt": "Export supported metrics and log events to an OTLP collector and verify arrival.",
+      "path": "apps/prompt-163-opentelemetry-metrics",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 164,
+      "title": "Tracing",
+      "prompt": "Enable supported beta tracing and inspect model, tool, and hook spans.",
+      "path": "apps/prompt-164-tracing",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 165,
+      "title": "Telemetry diagnostics",
+      "prompt": "Diagnose exporter failures through stderr without writing telemetry into the SDK’s protocol channel.",
+      "path": "apps/prompt-165-telemetry-diagnostics",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 166,
+      "title": "Startup failures",
+      "prompt": "Handle missing binaries, invalid configuration, authentication failures, and unexpected subprocess exits.",
+      "path": "apps/prompt-166-startup-failures",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 167,
+      "title": "Stalled responses",
+      "prompt": "Configure supported API timeouts, retries, and stalled-response detection; demonstrate a recoverable failure.",
+      "path": "apps/prompt-167-stalled-responses",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 168,
+      "title": "Rate limits",
+      "prompt": "Handle rate-limit information and distinguish runtime retries from application-level job retries.",
+      "path": "apps/prompt-168-rate-limits",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 169,
+      "title": "Tool diagnostics",
+      "prompt": "Explain why a tool was unavailable, denied, skipped, or failed using observable SDK events.",
+      "path": "apps/prompt-169-tool-diagnostics",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 170,
+      "title": "Final-event handling",
+      "prompt": "Handle relevant events after a result, including persistence failures, and shut down with telemetry cleanup.",
+      "path": "apps/prompt-170-final-event-handling",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 171,
+      "title": "Container deployment",
+      "prompt": "Containerize an SDK worker with the required runtime, dependencies, writable directories, and startup checks.",
+      "path": "apps/prompt-171-container-deployment",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 172,
+      "title": "Runtime suitability",
+      "prompt": "Assess whether my target platform supports subprocesses, filesystem state, execution duration, and streaming.",
+      "path": "apps/prompt-172-runtime-suitability",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 173,
+      "title": "Worker scaling",
+      "prompt": "Design worker routing and session restoration so requests can continue after a worker is replaced.",
+      "path": "apps/prompt-173-worker-scaling",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 174,
+      "title": "Tenant isolation",
+      "prompt": "Isolate each tenant’s workspace, credentials, settings, memory, and session data.",
+      "path": "apps/prompt-174-tenant-isolation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 175,
+      "title": "Command sandbox",
+      "prompt": "Enable supported command sandboxing and verify startup failure when required isolation is unavailable.",
+      "path": "apps/prompt-175-command-sandbox",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 176,
+      "title": "Network controls",
+      "prompt": "Restrict outbound network access and demonstrate both an allowed request and a blocked request.",
+      "path": "apps/prompt-176-network-controls",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 177,
+      "title": "Credential separation",
+      "prompt": "Keep sensitive service credentials outside the agent’s executable environment using controlled tools or a credential proxy.",
+      "path": "apps/prompt-177-credential-separation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 178,
+      "title": "Injection resistance",
+      "prompt": "Test malicious instructions embedded in files and tool results against the application’s actual permission and isolation controls.",
+      "path": "apps/prompt-178-injection-resistance",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 179,
+      "title": "Graceful shutdown",
+      "prompt": "Stop accepting new work, cancel or drain active sessions, and clean up subprocesses during shutdown.",
+      "path": "apps/prompt-179-graceful-shutdown",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 180,
+      "title": "Application packaging",
+      "prompt": "Package the SDK application using the documented bundling approach and verify execution on a clean target machine.",
+      "path": "apps/prompt-180-application-packaging",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 181,
+      "title": "Retrieval-augmented generation",
+      "prompt": "Build a document assistant using a custom retrieval tool and vector storage; return answers with evidence references.",
+      "path": "apps/prompt-181-retrieval-augmented-generation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 182,
+      "title": "Application memory",
+      "prompt": "Implement persistent user memory in application storage with retrieval, correction, expiration, and deletion.",
+      "path": "apps/prompt-182-application-memory",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 183,
+      "title": "REST service",
+      "prompt": "Expose an agent through a backend API with request validation, user authentication, and explicit session selection.",
+      "path": "apps/prompt-183-rest-service",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 184,
+      "title": "Streaming service",
+      "prompt": "Stream agent output through SSE or WebSockets, including completion, cancellation, and error events.",
+      "path": "apps/prompt-184-streaming-service",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 185,
+      "title": "Chat interface",
+      "prompt": "Build a web interface showing responses, tool activity, approval requests, session history, and cancellation.",
+      "path": "apps/prompt-185-chat-interface",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 186,
+      "title": "Database assistant",
+      "prompt": "Build a database assistant using authorized read-only queries and structured results.",
+      "path": "apps/prompt-186-database-assistant",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 187,
+      "title": "Document extraction",
+      "prompt": "Extract structured information from supplied documents and images, including evidence locations and missing-value handling.",
+      "path": "apps/prompt-187-document-extraction",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 188,
+      "title": "Coding assistant",
+      "prompt": "Build an agent that diagnoses a failing test, proposes a fix, edits approved files, and verifies the result.",
+      "path": "apps/prompt-188-coding-assistant",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 189,
+      "title": "Business workflow",
+      "prompt": "Build a support-ticket workflow that gathers evidence, drafts a response, and requests approval before external actions.",
+      "path": "apps/prompt-189-business-workflow",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 190,
+      "title": "Durable jobs",
+      "prompt": "Run agent tasks through an application job queue with scheduling, retry policies, cancellation, and idempotency.",
+      "path": "apps/prompt-190-durable-jobs",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 191,
+      "title": "Tool unit tests",
+      "prompt": "Test custom-tool validation, authorization, successful execution, failures, and repeated requests independently of the model.",
+      "path": "apps/prompt-191-tool-unit-tests",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 192,
+      "title": "Recorded-event tests",
+      "prompt": "Replay representative SDK events to test message parsing and interface behavior without making live model calls.",
+      "path": "apps/prompt-192-recorded-event-tests",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 193,
+      "title": "End-to-end scenarios",
+      "prompt": "Create a small set of realistic agent tasks and verify observable outcomes rather than exact response wording.",
+      "path": "apps/prompt-193-end-to-end-scenarios",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 194,
+      "title": "Failure scenarios",
+      "prompt": "Test denied permissions, tool timeouts, malformed results, lost connections, and interrupted sessions.",
+      "path": "apps/prompt-194-failure-scenarios",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 195,
+      "title": "Quality evaluation",
+      "prompt": "Evaluate factual correctness, evidence quality, tool selection, and task completion using explicit scoring criteria.",
+      "path": "apps/prompt-195-quality-evaluation",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 196,
+      "title": "Performance regression",
+      "prompt": "Compare two application versions using completion rate, latency, token usage, and estimated spending.",
+      "path": "apps/prompt-196-performance-regression",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 197,
+      "title": "Language portability",
+      "prompt": "Port one example between TypeScript and Python and document API, lifecycle, and feature differences.",
+      "path": "apps/prompt-197-language-portability",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 198,
+      "title": "Legacy migration",
+      "prompt": "Migrate old Claude Code SDK packages and removed TypeScript V2 APIs to currently supported Agent SDK interfaces.",
+      "path": "apps/prompt-198-legacy-migration",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 199,
+      "title": "Upgrade review",
+      "prompt": "Review SDK and bundled-runtime changelogs, identify relevant changes, and run focused compatibility checks before upgrading.",
+      "path": "apps/prompt-199-upgrade-review",
+      "runtime": "Node.js"
+    },
+    {
+      "number": 200,
+      "title": "Final capability audit",
+      "prompt": "Compare these exercises with every public capability in my installed SDK references; add runnable examples for uncovered supported features.",
+      "path": "apps/prompt-200-final-capability-audit",
+      "runtime": "Node.js"
+    }
+  ]
+}

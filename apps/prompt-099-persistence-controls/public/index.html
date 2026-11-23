@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 99 · Persistence Controls</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 99</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Persistence<br /><em>Controls</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">
+          Fresh native transcript-only appends. Actual initialization, zero-turn completion and
+          independent history reads; no assistant inference.
+        </p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Compare actual transcript persistence in TypeScript and Python</h2>
+          <p class="intro">
+            Append owned classroom context with shouldQuery: false. Compare each SDK's default
+            history with its supported suppression control, then inspect actual native transcript
+            files and messages.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">⌁</span>
+              <h3>Actual native persistence controls · no assistant turn</h3>
+              <span id="status" class="badge">Ready</span>
+            </div>
+            <div class="controls">
+              <label
+                >Language comparison<select id="mode">
+                  <option value="typescript">TypeScript controls</option>
+                  <option value="python">Python controls</option>
+                  <option value="compare">Compare both SDKs</option>
+                </select></label
+              ><label
+                >Classroom marker topic<select id="topic">
+                  <option value="MCP">MCP</option>
+                  <option value="Hooks">Hooks</option>
+                </select></label
+              ><button id="inspect" class="primary">▶ Run actual transcript controls</button>
+            </div>
+            <pre id="facts">
+shouldQuery: false · append context without an assistant model turn
+Fresh owned workspace and native configuration for each profile.
+Python profiles require PYTHON_PATH with the pinned Python SDK installed. No API key is required.</pre
+            >
+            <p id="progress">
+              Run the native profiles, then select one to inspect its actual stored history.
+            </p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Actual native profiles</span><strong id="profiles-value">—</strong>
+            </article>
+            <article>
+              <span>Profiles with transcripts</span><strong id="persisted-value">—</strong>
+            </article>
+            <article>
+              <span>Actual assistant turns</span><strong id="turns-value">—</strong>
+            </article>
+            <article><span>Native model cost</span><strong id="cost-value">—</strong></article>
+          </section>
+          <section class="panel profile-panel">
+            <div class="heading">
+              <span class="icon blue">⇢</span>
+              <h3>Select an actual native profile</h3>
+            </div>
+            <div class="controls">
+              <label>Observed profile<select id="profile-select" disabled></select></label>
+            </div>
+          </section>
+          <div class="outcome-panels">
+            <section class="panel">
+              <div class="heading">
+                <span class="icon blue">1</span>
+                <h3>Actual SDK configuration</h3>
+              </div>
+              <pre id="configuration"></pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon orange">2</span>
+                <h3>Actual native completion</h3>
+              </div>
+              <pre id="completion"></pre>
+            </section>
+            <section class="panel">
+              <div class="heading">
+                <span class="icon mint">3</span>
+                <h3>Independent history read</h3>
+              </div>
+              <pre id="history"></pre>
+            </section>
+          </div>
+          <section class="panel history-panel">
+            <div class="heading">
+              <span class="icon orange">☰</span>
+              <h3>Actual native transcript files and conversation messages</h3>
+            </div>
+            <pre id="native-history"></pre>
+          </section>
+          <section class="panel language-panel">
+            <div class="heading">
+              <span class="icon blue">{ }</span>
+              <h3>Observed language options and persistence outcomes</h3>
+            </div>
+            <pre id="difference"></pre>
+          </section>
+          <section class="panel verification-panel checks-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Verify native identity, zero-turn execution and actual stored history</h3>
+            </div>
+            <pre id="checks"></pre>
+            <pre id="provenance">
+These are fresh native transcript-only operations, not model-generated answers. The caller assigns a supported session UUID and checks actual init/result values. A separate host-created note remains outside transcript persistence control.</pre
+            >
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Actual native message evidence for the selected profile</h3>
+            </div>
+            <pre id="evidence"></pre>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed persistence-controls report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>TypeScript persistSession and Python environment control</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 99 · Persistence controls</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Persistence controls infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 99 cover with Author: Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

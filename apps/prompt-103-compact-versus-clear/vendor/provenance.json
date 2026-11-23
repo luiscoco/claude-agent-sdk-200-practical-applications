@@ -1,0 +1,5 @@
+{
+  "source": "https://github.com/anthropics/claude-agent-sdk-typescript/blob/main/examples/session-stores/shared/conformance.ts",
+  "sha256": "c141e6aed9787438bf4006b6acfdf9d0e376d64ca467ff56fef784648f13d255",
+  "adaptation": "Only the bun:test import is replaced with node:test and a node:assert bridge. Case bodies unchanged."
+}

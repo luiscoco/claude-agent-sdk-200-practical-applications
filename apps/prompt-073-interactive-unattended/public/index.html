@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prompt 73 · Interactive and Unattended Permissions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong class="brand"><span>✳</span> Claude</strong><b>Prompt 73</b
+      ><span>Claude Agent SDK · Practical course</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <h1>Default and<br /><em>dontAsk</em></h1>
+        <nav>
+          <button data-view="app" class="active">Application</button
+          ><button data-view="source">Source code</button
+          ><button data-view="infographic">Main infographic</button
+          ><button data-view="cover">Lesson cover</button>
+        </nav>
+        <p class="note">Compare native default and dontAsk modes on the same owned file write.</p>
+      </aside>
+      <main>
+        <section id="app-view" class="view">
+          <h2>Compare default approval handling with dontAsk</h2>
+          <p class="intro">
+            Each run reads a fresh synthetic classroom note and attempts the same owned file write.
+            Inspect the actual approval callback, native result and output file under each mode.
+          </p>
+          <section class="panel input-panel">
+            <div class="heading">
+              <span class="icon orange">±</span>
+              <h3>Actual permission-mode comparison</h3>
+              <span id="status" class="badge">Loading</span>
+            </div>
+            <div class="controls">
+              <label
+                >Permission configuration<select id="mode">
+                  <option value="default-allow">Default, host approves</option>
+                  <option value="default-deny">Default, host denies</option>
+                  <option value="dont-ask">dontAsk, no preapproval</option>
+                  <option value="preapproved">dontAsk, preapprove Write</option>
+                </select></label
+              >
+              <label
+                >Classroom topic<select id="topic">
+                  <option value="MCP">MCP</option>
+                  <option value="Hooks">Hooks</option>
+                </select></label
+              >
+              <button id="inspect" class="primary" disabled>▶ Run permission experiment</button>
+              <button id="failure" class="secondary">Select dontAsk</button>
+              <button id="repair" class="secondary">Preapprove unattended Write</button>
+            </div>
+            <pre id="facts"></pre>
+            <p id="progress">Loading permission-mode settings.</p>
+            <div id="error" class="error hidden" role="alert"></div>
+          </section>
+          <section class="summary">
+            <article>
+              <span>Active permission mode</span><strong id="handler-result">—</strong>
+            </article>
+            <article>
+              <span>Write advertised</span><strong id="native-result-value">—</strong>
+            </article>
+            <article>
+              <span>Approval callback requests</span><strong id="final-result">—</strong>
+            </article>
+            <article>
+              <span>Actual output file exists</span><strong id="execution-count">—</strong>
+            </article>
+          </section>
+          <div class="outcome-panels">
+            <section class="panel handler-panel">
+              <div class="heading">
+                <span class="icon orange">ƒ</span>
+                <h3>Actual SDK permission configuration</h3>
+              </div>
+              <pre id="handler"></pre>
+            </section>
+            <section class="panel native-result-panel">
+              <div class="heading">
+                <span class="icon mint">⇢</span>
+                <h3>Actual advertisement and approval callback</h3>
+              </div>
+              <pre id="native-result"></pre>
+            </section>
+            <section class="panel final-panel">
+              <div class="heading">
+                <span class="icon blue">{ }</span>
+                <h3>Actual file and final structured result</h3>
+              </div>
+              <pre id="final-output"></pre>
+            </section>
+          </div>
+          <section class="panel verification-panel checks-panel">
+            <div class="heading">
+              <span class="icon mint">✓</span>
+              <h3>Checks against native modes, approvals and files</h3>
+            </div>
+            <pre id="checks"></pre>
+            <pre id="provenance"></pre>
+          </section>
+          <section class="panel evidence-panel">
+            <div class="heading">
+              <span class="icon blue">⌘</span>
+              <h3>Actual calls, native replies and file evidence</h3>
+            </div>
+            <pre id="evidence"></pre>
+            <details>
+              <summary>Preserved native tool results and lifecycle hooks</summary>
+              <pre id="tool-results"></pre>
+            </details>
+          </section>
+          <section class="panel verification-panel">
+            <pre id="metadata"></pre>
+            <a id="download" class="secondary hidden" download
+              >Download observed permission-mode report</a
+            >
+          </section>
+        </section>
+        <section id="source-view" class="view hidden">
+          <h2>Actual permission modes, preapproval and host callback</h2>
+          <div id="files"></div>
+          <div class="code-panel">
+            <h3 id="source-title"></h3>
+            <pre id="source"></pre>
+          </div>
+        </section>
+        <section id="infographic-view" class="view hidden">
+          <h2>Prompt 73 · Interactive and unattended permissions</h2>
+          <img
+            class="slide"
+            src="assets/main-infographic.png"
+            alt="Original Interactive and unattended permissions infographic"
+          />
+        </section>
+        <section id="cover-view" class="view hidden">
+          <img
+            class="slide"
+            src="assets/cover.png"
+            alt="Prompt 73 cover with author Luis Coco Enríquez below his photograph"
+          />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
