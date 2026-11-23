@@ -1,4 +1,4 @@
-# Claude Agent SDK — 200 Practical Applications
+# Claude Agent SDK 200 Practical Applications
 
 **Learn to build agents by running, inspecting and changing real application code.**
 
